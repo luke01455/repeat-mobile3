@@ -11,9 +11,9 @@ import { checkUserSession } from './redux/user/user.actions';
 
 const App = ({ checkUserSession, currentUser }) => {
 
-  // useEffect(() => {
-  //   checkUserSession(); 
-  // }, [checkUserSession]);
+  useEffect(() => {
+    checkUserSession(); 
+  }, [checkUserSession]);
 
   return (
     <div className="App">
@@ -23,6 +23,14 @@ const App = ({ checkUserSession, currentUser }) => {
   );
 }
 
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+})
+
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+})
 
 
-export default App;
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
