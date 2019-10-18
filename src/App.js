@@ -21,8 +21,17 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <div className="App">
       <Header />
-      <HomePage />
-      <SignIn />
+      <Route
+              exact
+              path="/"
+              render={() =>
+                currentUser ? (
+                  <SignIn/>             
+                ) : (
+                  <HomePage />
+                )
+              }
+              />
     </div>
   );
 }
