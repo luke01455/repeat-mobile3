@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { SignInContainer, SignInTitle, ButtonsBarContainer} from './sign-in.styles';
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
+
+import './sign-in.styles.scss';
 
 const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
 
@@ -26,17 +27,15 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
         setCredentials({...userCredentials, [name]: value})
     };
         return (
-            <SignInContainer>
-                <SignInTitle>I already have an account</SignInTitle>
-                <span>Sign in with your email and password</span>
-
+            <div className='SignInContainer'>
+                <div className='SignInTitle'>SIGN IN</div>
                 <form onSubmit={handleSubmit}>
                     <FormInput
                         name="email"
                         type="email"
                         value={email}
                         required
-                        label="email"
+                        label="EMAIL"
                         handleChange={handleChange}
                     />
                     <FormInput
@@ -44,19 +43,19 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
                         type="password"
                         value={password}
                         required
-                        label="password"
+                        label="PASSWORD"
                         handleChange={handleChange}
                     />
-                    <ButtonsBarContainer>
+                    <div className='ButtonsBarContainer'>
                     <CustomButton type="submit">Sign In</CustomButton>
                     <CustomButton 
                     type='button' onClick={googleSignInStart} isGoogleSignIn>
                         Sign In With Google
                     </CustomButton>
-                    </ButtonsBarContainer>
+                    </div>
                 </form>
 
-            </SignInContainer>
+            </div>
         )
     }
 

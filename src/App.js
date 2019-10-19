@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -10,7 +10,7 @@ import SignIn from './components/sign-in/sign-in.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-import './App.css';
+import './App.scss';
 
 const App = ({ checkUserSession, currentUser }) => {
 
@@ -18,17 +18,17 @@ const App = ({ checkUserSession, currentUser }) => {
     checkUserSession(); 
   }, [checkUserSession]);
 
+
   return (
     <div className="App">
-      <Header />
       <Route
               exact
               path="/"
               render={() =>
                 currentUser ? (
-                  <SignIn/>             
+                  <SignIn/>         
                 ) : (
-                  <HomePage />
+                  <HomePage /> 
                 )
               }
               />

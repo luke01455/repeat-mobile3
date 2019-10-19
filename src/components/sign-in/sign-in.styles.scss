@@ -1,0 +1,15 @@
+.SignInContainer {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SignInTitle {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.ButtonsBarContainer {
+    display: flex;
+    justify-content: space-between;
+}
