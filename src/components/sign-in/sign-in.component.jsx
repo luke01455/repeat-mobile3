@@ -46,13 +46,13 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
                         label="PASSWORD"
                         handleChange={handleChange}
                     />
-                    <div className='ButtonsBarContainer'>
+                    {/* <div className='ButtonsBarContainer'>
                     <CustomButton type="submit">Sign In</CustomButton>
                     <CustomButton 
                     type='button' onClick={googleSignInStart} isGoogleSignIn>
                         Sign In With Google
                     </CustomButton>
-                    </div>
+                    </div> */}
                 </form>
 
             </div>
