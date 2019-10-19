@@ -2,11 +2,15 @@
     width: 380px;
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
 }
 
 .SignInTitle {
-    margin: 10px 0;
+    margin: 10px 50px;
     font-size: 1.5em;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 50px;
 }
 
 .ButtonsBarContainer {
