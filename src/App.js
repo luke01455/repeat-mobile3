@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import HomePage from './pages/homepage/homepage.component';
-import Header from './components/header/header-component';
+import MenuButton from './components/header/menu-button-component';
 import SignIn from './components/sign-in/sign-in.component';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
@@ -21,6 +21,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
   return (
     <div className="App">
+      <MenuButton />
       <Route
               exact
               path="/"
