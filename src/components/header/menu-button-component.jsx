@@ -1,15 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { toggleSideMenuHidden } from '../../redux/side-menu/side-menu.actions';
 
 import './menu-button.styles.css';
 
-const MenuButton = () => (
-<div className="MenuButtonContainer">
-<button class="hamburger hamburger--3dy is-active" type="button">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
+const MenuButton = ({ toggleSideMenuHidden }) => (
+<div onClick={toggleSideMenuHidden}className="MenuButtonContainer">
+  <button className="hamburger hamburger--3dy is-active" type="button">
+    <span className="hamburger-box">
+      <span className="hamburger-inner"></span>
+    </span>
+  </button>
 </div>
 )
 
-export default MenuButton;
+const mapDispatchToProps = dispatch => ({
+  toggleSideMenuHidden: () => dispatch(toggleSideMenuHidden())
+});
+
+export default connect(null, mapDispatchToProps)(MenuButton);
