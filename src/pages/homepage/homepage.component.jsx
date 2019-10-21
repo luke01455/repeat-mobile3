@@ -1,13 +1,14 @@
 import React from 'react';
 
 import DiscImage from '../../components/disc-image/disc-image.component';
-import CustomButton from '../../components/custom-button/custom-button.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
 
+import './homepage.styles.scss';
+
 const HomePage = () => (
-    <div>
-        <div> Save the past...</div>
-        <div> 10 minutes </div>
+    <div className="homepage-container">
+        <div className="save-past-text"> Save the past...</div>
+        <div className="10-minutes-text"> 10 minutes </div>
         <RangeBar />
         <DiscImage />
     </div>
