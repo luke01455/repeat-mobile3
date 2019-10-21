@@ -1,8 +1,8 @@
 .MenuButtonContainer {
     width: 100vw;
-    max-width: 450px;
     text-align: left;
     margin-left: 3px;
+    max-width: 200px;
 }
 
 .hamburger {

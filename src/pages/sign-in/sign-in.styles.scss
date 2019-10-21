@@ -1,8 +1,10 @@
 .SignInContainer {
-    width: 380px;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     margin-top: 15px;
+    max-width: 500px;
+    min-width: 200px;
 }
 
 .SignInTitle {
@@ -19,4 +21,6 @@
 .ButtonsBarContainer {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 55px;
 }
