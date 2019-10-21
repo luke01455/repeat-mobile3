@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import FormInput from '../../components/form-input/form-input.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import Title from '../../components/title/title.component';
 
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
 
@@ -28,6 +29,7 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
     };
         return (
             <div className='SignInContainer'>
+                <Title />
                 <div className='SignInTitle'>SIGN IN</div>
                 <form onSubmit={handleSubmit}>
                     <FormInput
