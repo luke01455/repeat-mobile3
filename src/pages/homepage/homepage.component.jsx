@@ -2,6 +2,7 @@ import React from 'react';
 
 import DiscImage from '../../components/disc-image/disc-image.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 import './homepage.styles.scss';
 
@@ -11,6 +12,14 @@ const HomePage = () => (
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
         <DiscImage />
+        <CustomButton className="save-button"> Save </CustomButton>
+        <div className="buttons-wrapper">
+        <div>Btn</div>
+        <div>Btn</div>
+        <div>Btn</div>
+        </div>
+        <div> Log In </div>
+        <div> Sign Up </div>
     </div>
 )
 
