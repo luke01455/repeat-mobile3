@@ -1,0 +1,20 @@
+.cd-container {
+    flex: 2 1 0;
+    padding-bottom: 3%;
+  }
+
+  .App-logo {
+    animation: App-logo-spin infinite 9s linear;
+    height: 15vh;
+    pointer-events: none;
+    min-height: 85px;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
