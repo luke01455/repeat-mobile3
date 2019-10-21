@@ -6,6 +6,7 @@ const buttonStyles = css`
   border: 1px solid #707070;
   border-radius: 3px;
   font-family: 'Chivo', sans-serif; 
+  overflow: hidden;
 
   &:hover {
     background-color: white;
@@ -18,6 +19,7 @@ const invertedButtonStyles = css`
   background-color: white;
   color: black;
   border: 1px solid black;
+  overflow: hidden;
 
   &:hover {
     background-color: black;
@@ -45,6 +47,7 @@ const getButtonStyles = props => {
 };
 
 export const CustomButtonContainer = styled.button`
+  margin-top: 20px;
   min-width: 165px;
   width: auto;
   height: 50px;

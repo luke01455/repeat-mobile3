@@ -8,19 +8,44 @@
 }
 
 .SignInTitle {
-    
-    margin: 10px 50px;
+    margin: 10px 51px;
     margin-top: 45px;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: left;
-    padding-left: 20px;
-    padding-bottom: 50px;
+    margin-bottom: 40px;
     font-weight: bold;
 }
 
 .ButtonsBarContainer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-top: 10px;
-    margin-left: 55px;
+    margin-top: 30px;
+    margin-left: 51px;
+    max-width: 220px;
 }
+
+.sign-up-text {
+margin-top: 80px;
+margin-left: 51px;
+text-align: left;
+color: #707070;
+cursor: pointer;
+
+&:hover {
+    color: black;
+}
+}
+
+.forgot-password-text {
+margin-top: 5px;
+margin-left: 51px;
+text-align: left;
+color: #707070;
+cursor: pointer;
+
+&:hover {
+    color: black;
+}
+}
+

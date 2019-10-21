@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import HomePage from './pages/homepage/homepage.component';
-import MenuButton from './components/header/menu-button-component';
+import MenuButton from './components/menu-button/menu-button-component';
 import SignIn from './pages/sign-in/sign-in.component';
 
 import { selectCurrentUser } from './redux/user/user.selectors';

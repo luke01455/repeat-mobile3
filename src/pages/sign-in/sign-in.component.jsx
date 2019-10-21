@@ -28,6 +28,7 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
         setCredentials({...userCredentials, [name]: value})
     };
         return (
+            
             <div className='SignInContainer'>
                 <Title />
                 <div className='SignInTitle'>SIGN IN</div>
@@ -50,13 +51,14 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
                     />
                     { <div className='ButtonsBarContainer'>
                     <CustomButton type="submit">Sign In</CustomButton>
-                    {/* <CustomButton 
-                    type='button' onClick={googleSignInStart} isGoogleSignIn>
-                        Sign In With Google
-                    </CustomButton> */}
+                    { <CustomButton 
+                    type='button' onClick={googleSignInStart}>
+                       <div></div> Google Sign In
+                    </CustomButton> }
                     </div> }
                 </form>
-
+              <div className="sign-up-text"> Sign up </div>
+              <div className="forgot-password-text"> Forgot your password? </div>
             </div>
         )
     }

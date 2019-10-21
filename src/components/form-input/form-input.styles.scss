@@ -12,7 +12,7 @@ $main-color: black;
 .group {
   position: relative;
   width: 70vw;
-  max-width: 500px;
+  max-width: 380px;
   min-width: 150px;
   font-family: 'Chivo', sans-serif;
   margin-left: 50px;
@@ -31,9 +31,14 @@ $main-color: black;
     border-bottom: 1px solid $sub-color;
     margin: 10px 0px;
 
+    &:hover {
+      background-color: #b8bab8;
+    }
+
     &:focus {
       outline: none;
-      border: 1px solid $main-color;
+      background-color: white;
+      border: 1.8px solid $main-color;
     }
 
     &:focus ~ .form-input-label {
