@@ -1,10 +1,12 @@
 .Rangebar-Container {
     flex: 1 1 0;
     height: 10vh;
+    margin-top: 20px;
+    margin-left: 40px;
   }
   .range {
     margin-bottom: 8%;
-    width: 50vw;
+    width: 200px;
     max-width: 250px;
     height: 0.3vh;
     background: grey;

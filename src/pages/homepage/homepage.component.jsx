@@ -8,7 +8,7 @@ import './homepage.styles.scss';
 const HomePage = () => (
     <div className="homepage-container">
         <div className="save-past-text"> Save the past...</div>
-        <div className="10-minutes-text"> 10 minutes </div>
+        <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
         <DiscImage />
     </div>
