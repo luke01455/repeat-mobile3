@@ -11,10 +11,12 @@ $main-color: black;
 
 .group {
   position: relative;
-  width: 100vw;
-  max-width: 350px;
+  width: 90vw;
+  max-width: 500px;
+  min-width: 330px;
   font-family: 'Chivo', sans-serif;
-  margin-left: auto;
+  margin-left: 20px;
+  
 
   .form-input {
     background: none;

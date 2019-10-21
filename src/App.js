@@ -5,7 +5,7 @@ import { createStructuredSelector } from 'reselect';
 
 import HomePage from './pages/homepage/homepage.component';
 import MenuButton from './components/header/menu-button-component';
-import SignIn from './components/sign-in/sign-in.component';
+import SignIn from './pages/sign-in/sign-in.component';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
