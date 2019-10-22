@@ -22,11 +22,11 @@ const Header = ({ currentUser, signOutStart }) => (
         {
                 currentUser ? (
                 <Link className='OptionLink' to='/signin'>
-                    SIGN IN
+                    MY ACC
                 </Link>
                 ) : (
-                <div className='OptionLink' as='div' onClick={signOutStart}>
-                    SIGN OUT
+                <div className='OptionLink' as='div' >
+                    SIGN UP
                 </div>
                 )}
             {
