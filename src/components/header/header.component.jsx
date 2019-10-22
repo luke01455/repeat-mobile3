@@ -2,29 +2,32 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropDown from '../cart-dropdown/cart-dropdown.component';
-import { ReactComponent as Logo } from '../../assets/crown.svg';
-import { selectCartHidden } from '../../redux/cart/cart.selectors';
-import { selectCurrentUser } from '../../redux/user/user.selectors';
+
 import { signOutStart } from '../../redux/user/user.actions';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+
+import MenuButton from '../../components/menu-button/menu-button-component';
 
 import { HeaderContainer, LogoContainer, OptionContainer, OptionLink} from './header.styles';
 
 
 
-const Header = ({ currentUser, hidden, signOutStart }) => (
+const Header = ({ currentUser, signOutStart }) => (
     <HeaderContainer>
         <LogoContainer to="/">
-            <Logo className='logo' />
+            <MenuButton />
         </LogoContainer>
         <OptionContainer>
-            <OptionLink to='/shop'>
-                SHOP
-            </OptionLink>
-            <OptionLink to='/shop'>
-                CONTACT
-            </OptionLink>
+        {
+                currentUser ? (
+                <OptionLink to='/signin'>
+                    SIGN IN
+                </OptionLink>
+                ) : (
+                <OptionLink as='div' onClick={signOutStart}>
+                    SIGN OUT
+                </OptionLink>
+                )}
             {
                 currentUser ? (
                 <OptionLink as='div' onClick={signOutStart}>
@@ -35,15 +38,12 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
                     SIGN IN
                 </OptionLink>
                 )}
-                <CartIcon />
         </OptionContainer>
-        {hidden ? null : <CartDropDown />}
     </HeaderContainer>
 )
 
 const mapStateToProps = createStructuredSelector({
-    currentUser: selectCurrentUser,
-    hidden: selectCartHidden
+    currentUser: selectCurrentUser
 });
 
 const mapDispatchToProps = dispatch => ({
