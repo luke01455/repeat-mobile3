@@ -1,7 +1,4 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-export const HeaderContainer = styled.div`
+.HeaderContainer {
     height: 70px;
     width: 100%;
     display: flex;
@@ -13,9 +10,10 @@ export const HeaderContainer = styled.div`
         padding: 10px;
         margin-bottom: 20px;
     }
-`;
+}
 
-export const LogoContainer = styled(Link)`
+
+.LogoContainer {
     height: 100%;
     width: 70px;
     padding: 25px;
@@ -24,9 +22,9 @@ export const LogoContainer = styled(Link)`
         width: 50px;
         padding: 0;
     }
-`;
+}
 
-export const OptionContainer = styled.div`
+.OptionContainer {
     width: 50%;
     height: 100%;
     display: flex;
@@ -36,9 +34,11 @@ export const OptionContainer = styled.div`
     @media screen and (max-width: 800px) {
         width: 80%;
     }
-`;
+}
 
-export const OptionLink = styled(Link)`
+.OptionLink {
+    color: black;
     padding: 10px 15px;
+    text-decoration: none;
     cursor: pointer;
-`
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { Link } from 'react-router-dom';
 
 
 import { signOutStart } from '../../redux/user/user.actions';
@@ -8,38 +9,38 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import MenuButton from '../../components/menu-button/menu-button-component';
 
-import { HeaderContainer, LogoContainer, OptionContainer, OptionLink} from './header.styles';
+import './header.styles.scss';
 
 
 
 const Header = ({ currentUser, signOutStart }) => (
-    <HeaderContainer>
-        <LogoContainer to="/">
+    <div className='HeaderContainer'>
+        <Link className='LogoContainer' to="/">
             <MenuButton />
-        </LogoContainer>
-        <OptionContainer>
+        </Link>
+        <div className='OptionContainer'>
         {
                 currentUser ? (
-                <OptionLink to='/signin'>
+                <Link className='OptionLink' to='/signin'>
                     SIGN IN
-                </OptionLink>
+                </Link>
                 ) : (
-                <OptionLink as='div' onClick={signOutStart}>
+                <div className='OptionLink' as='div' onClick={signOutStart}>
                     SIGN OUT
-                </OptionLink>
+                </div>
                 )}
             {
                 currentUser ? (
-                <OptionLink as='div' onClick={signOutStart}>
+                <div className='OptionLink' as='div' onClick={signOutStart}>
                     SIGN OUT
-                </OptionLink>
+                </div>
                 ) : (
-                <OptionLink to='/signin'>
+                <Link className='OptionLink' to='/signin'>
                     SIGN IN
-                </OptionLink>
+                </Link>
                 )}
-        </OptionContainer>
-    </HeaderContainer>
+        </div>
+    </div>
 )
 
 const mapStateToProps = createStructuredSelector({
