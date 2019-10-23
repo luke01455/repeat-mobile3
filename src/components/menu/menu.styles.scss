@@ -1,8 +1,5 @@
 .styled-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: white;
+    background-color: grey;
     height: 100vh;
     text-align: left;
     padding: 4rem;
@@ -10,18 +7,23 @@
     top: 0;
     left: 0;
     transition: transform 0.3s ease-in-out;
+    border: 1px solid black;
 
     &.closed {
         transform: translateX(-100%);
     }
 
-    .a {
+    .a-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: top;
+      margin-top: 50px;
+ 
         a {
-            font-size: 2rem;
+            font-size: 15px;
             text-transform: uppercase;
-            padding: 2rem 0;
+            padding: 10px 0;
             font-weight: bold;
-            letter-spacing: 0.5rem;
             color: black;
             text-decoration: none;
             transition: color 0.3s linear;
@@ -30,5 +32,5 @@
               color: white;
             }
           }
-    }
+        }
 }
