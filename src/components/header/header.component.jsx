@@ -13,7 +13,13 @@ import './header.styles.scss';
 
 
 
-const Header = ({ currentUser, signOutStart }) => (
+const Header = ({ currentUser, signOutStart }) => {
+    let firstName = ''
+    if(currentUser) {
+        firstName = currentUser.displayName.split(' ')
+    }
+    
+    return (
     <div className='HeaderContainer'>
         <Link className='LogoContainer' to="/">
             <MenuButton />
@@ -22,7 +28,7 @@ const Header = ({ currentUser, signOutStart }) => (
         {
                 currentUser ? (
                 <Link className='OptionLink' to='/signin'>
-                    {currentUser.displayName}
+                    {firstName[0].toUpperCase()}
                 </Link>
                 ) : (
                 <div className='OptionLink' as='div' >
@@ -41,7 +47,8 @@ const Header = ({ currentUser, signOutStart }) => (
                 )}
         </div>
     </div>
-)
+    )
+}
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser

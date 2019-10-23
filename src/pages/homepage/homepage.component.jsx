@@ -18,8 +18,6 @@ const HomePage = () => (
         <div>Btn</div>
         <div>Btn</div>
         </div>
-        <div> Log In </div>
-        <div> Sign Up </div>
     </div>
 )
 

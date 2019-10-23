@@ -6,18 +6,21 @@ import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors'
 
 import './menu.styles.scss';
 
-const Menu = ({hidden}) => {
+const Menu = ({ hidden }) => {
   return (
     <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <div className='a-container'>
-      <a href="/">
-        About us
+        <a href="/">
+          ACCOUNT SETTINGS
       </a>
-      <a href="/">
-        Pricing
+        <a href="/">
+          RECORDING SETTINGS
         </a>
-      <a href="/">
-        Contact
+        <a href="/">
+          GO PREMIUM
+        </a>
+        <a href="/">
+          CONTACT
         </a>
       </div>
     </div>
@@ -25,6 +28,6 @@ const Menu = ({hidden}) => {
 }
 
 const mapStateToProps = createStructuredSelector({
-    hidden: selectSideMenuHidden
-  });
+  hidden: selectSideMenuHidden
+});
 export default connect(mapStateToProps)(Menu);
