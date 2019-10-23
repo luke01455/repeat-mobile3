@@ -25,15 +25,15 @@ const Header = ({ currentUser, signOutStart }) => {
             <MenuButton />
         </Link>
         <div className='OptionContainer'>
-        {
+            {
                 currentUser ? (
                 <Link className='OptionLink' to='/signin'>
                     {firstName[0].toUpperCase()}
                 </Link>
                 ) : (
-                <div className='OptionLink' as='div' >
+                    <Link className='OptionLink' to='/signup'>
                     SIGN UP
-                </div>
+                </Link>
                 )}
             {
                 currentUser ? (

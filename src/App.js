@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 
 import HomePage from './pages/homepage/homepage.component';
 import SignIn from './pages/sign-in/sign-in.component';
+import SignUp from './pages/sign-up/sign-up.component';
 import Title from './components/title/title.component';
 import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
@@ -48,6 +49,17 @@ const App = ({ checkUserSession, currentUser }) => {
                   <Redirect to="/" />
                 ) : (
                   <SignIn />
+                )
+              }
+              />
+                                <Route
+              exact
+              path="/signup"
+              render={() =>
+                currentUser ? (
+                  <Redirect to="/" />
+                ) : (
+                  <SignUp />
                 )
               }
               />
