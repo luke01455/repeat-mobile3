@@ -19,7 +19,7 @@ const MenuButton = ({ toggleSideMenuHidden, hidden }) => (
 
 const mapStateToProps = createStructuredSelector({
   hidden: selectSideMenuHidden
-})
+});
 const mapDispatchToProps = dispatch => ({
   toggleSideMenuHidden: () => dispatch(toggleSideMenuHidden())
 });

@@ -1,10 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
+import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
 
 import './menu.styles.scss';
 
-const Menu = () => {
+const Menu = ({hidden}) => {
   return (
-    <div className='styled-menu closed'>
+    <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <a href="/">
         <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
         About us
@@ -20,4 +24,8 @@ const Menu = () => {
     </div>
   )
 }
-export default Menu;
+
+const mapStateToProps = createStructuredSelector({
+    hidden: selectSideMenuHidden
+  });
+export default connect(mapStateToProps)(Menu);
