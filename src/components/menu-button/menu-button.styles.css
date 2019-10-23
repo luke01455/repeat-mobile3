@@ -5,9 +5,11 @@
     text-align: left;
     margin-left: 3px;
     max-width: 200px;
+    
 }
 
 .hamburger {
+    outline: none;
     padding: 15px 15px;
     display: inline-block;
     cursor: pointer;
