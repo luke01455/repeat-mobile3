@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import './title.styles.scss';
 
 const Title = () => (
-<div className="title-container"> Repeat20 </div>
+<Link className="title-container" to="/" > Repeat20 </Link>
 )
 
 export default Title;
