@@ -14,9 +14,9 @@ const HomePage = () => (
         <DiscImage />
         <CustomButton className="save-button"> Save </CustomButton>
         <div className="buttons-wrapper">
-        <div>Btn</div>
-        <div>Btn</div>
-        <div>Btn</div>
+        <div>SETTINGS</div>
+        <div>RECORDINGS</div>
+        <div>PREMIUM</div>
         </div>
     </div>
 )
