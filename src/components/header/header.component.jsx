@@ -22,7 +22,7 @@ const Header = ({ currentUser, signOutStart }) => (
         {
                 currentUser ? (
                 <Link className='OptionLink' to='/signin'>
-                    MY ACC
+                    {currentUser.displayName}
                 </Link>
                 ) : (
                 <div className='OptionLink' as='div' >
