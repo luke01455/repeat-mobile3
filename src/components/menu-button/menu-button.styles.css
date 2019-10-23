@@ -1,4 +1,6 @@
 .MenuButtonContainer {
+    position: absolute;
+    z-index: 10;
     width: 100vw;
     text-align: left;
     margin-left: 3px;
