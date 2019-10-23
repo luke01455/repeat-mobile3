@@ -7,6 +7,7 @@ import HomePage from './pages/homepage/homepage.component';
 import SignIn from './pages/sign-in/sign-in.component';
 import Title from './components/title/title.component';
 import Header from './components/header/header.component';
+import Menu from './components/menu/menu.component';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -23,6 +24,7 @@ const App = ({ checkUserSession, currentUser }) => {
   return (
     <div className="App">
       <Header />
+      <Menu />
       <Title />
       <Switch>
       <Route
