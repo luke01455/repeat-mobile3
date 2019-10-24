@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './title.styles.scss';
+import './premium.styles.scss';
 
-const Premium = () => (
+const PremiumPage = () => (
 <div className="premium-container"> 
     <div> Title </div>
     <div> Description </div>
@@ -16,4 +16,4 @@ const Premium = () => (
 </div>
 )
 
-export default Premium;
+export default PremiumPage;

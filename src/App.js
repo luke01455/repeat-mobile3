@@ -6,9 +6,12 @@ import { createStructuredSelector } from 'reselect';
 import HomePage from './pages/homepage/homepage.component';
 import SignIn from './pages/sign-in/sign-in.component';
 import SignUp from './pages/sign-up/sign-up.component';
+import PremiumPage from './pages/premium/premium-component';
+
 import Title from './components/title/title.component';
 import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
+
 
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
@@ -41,7 +44,7 @@ const App = ({ checkUserSession, currentUser }) => {
                 )
               }
               />
-                  <Route
+              <Route
               exact
               path="/signin"
               render={() =>
@@ -52,7 +55,7 @@ const App = ({ checkUserSession, currentUser }) => {
                 )
               }
               />
-                                <Route
+              <Route
               exact
               path="/signup"
               render={() =>
@@ -60,6 +63,17 @@ const App = ({ checkUserSession, currentUser }) => {
                   <Redirect to="/" />
                 ) : (
                   <SignUp />
+                )
+              }
+              />
+              <Route
+              exact
+              path="/premium"
+              render={() =>
+                currentUser ? (
+                  <PremiumPage />
+                ) : (
+                  <PremiumPage />
                 )
               }
               />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import DiscImage from '../../components/disc-image/disc-image.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
@@ -16,7 +17,7 @@ const HomePage = () => (
         <div className="buttons-wrapper">
         <div>SETTINGS</div>
         <div>RECORDINGS</div>
-        <div>PREMIUM</div>
+        <Link className="Link-container" to="/premium">PREMIUM</Link>
         </div>
     </div>
 )

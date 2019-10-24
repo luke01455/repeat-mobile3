@@ -16,7 +16,7 @@ const Menu = ({ hidden }) => {
         <a href="/">
           RECORDING SETTINGS
         </a>
-        <a href="/">
+        <a href="/premium">
           GO PREMIUM
         </a>
         <a href="/">

@@ -30,7 +30,16 @@ font-size: 1.2em;
     align-items: center;
     justify-content: space-around;
 
+
     div {
         margin: 10px;
     }
+
+
+}
+
+// hacky this needs fixing
+.Link-container {
+    text-decoration: none;
+    color: black;
 }
