@@ -1,5 +1,6 @@
 import React from 'react';
 
+import StripeCheckoutButton from '../../components/stripe-button/stripe.button.component';
 import './premium.styles.scss';
 
 const PremiumPage = () => (
@@ -12,7 +13,7 @@ const PremiumPage = () => (
         <li> Location based recording option</li>
         <li> Help support the team! </li>
     </ul>
-    <div> Purchase </div>
+    <StripeCheckoutButton />
 </div>
 )
 

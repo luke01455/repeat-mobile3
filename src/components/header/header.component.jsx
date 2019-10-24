@@ -21,7 +21,7 @@ const Header = ({ currentUser, signOutStart }) => {
     
     return (
     <div className='HeaderContainer'>
-        <Link className='LogoContainer' to="/">
+        <Link className='LogoContainer'>
             <MenuButton />
         </Link>
         <div className='OptionContainer'>
