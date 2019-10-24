@@ -21,9 +21,9 @@ const Header = ({ currentUser, signOutStart }) => {
     
     return (
     <div className='HeaderContainer'>
-        <Link className='LogoContainer'>
+        <div className='LogoContainer'>
             <MenuButton />
-        </Link>
+        </div>
         <div className='OptionContainer'>
             {
                 currentUser ? (
