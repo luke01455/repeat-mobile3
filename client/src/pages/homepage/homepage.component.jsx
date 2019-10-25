@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom'
 
 import DiscImage from '../../components/disc-image/disc-image.component';
@@ -6,11 +8,12 @@ import RangeBar from '../../components/range-bar/range-bar.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import AccountReqModal from '../../components/account-required-modal/account-required-modal.component';
 
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+
 import './homepage.styles.scss';
 
-const HomePage = () => (
+const HomePage = ({ currentUser }) => (
     <div className="homepage-container">
-        <AccountReqModal />
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
@@ -19,12 +22,17 @@ const HomePage = () => (
         <div className="buttons-wrapper">
         <Link className="Link-container" to="/settings">SETTINGS</Link>
         <div>RECORDINGS</div>
-        <Link className="Link-container" to="/premium">PREMIUM</Link>
+        { currentUser ?
+        <Link className="Link-container" to="/premium">PREMIUM</Link> :
+        <AccountReqModal />
+        }
+        
         </div>
     </div>
 )
 
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser
+});
 
-
-
-export default HomePage;
+export default connect(mapStateToProps)(HomePage);
