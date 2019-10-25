@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage';
 
 import userReducer from './user/user.reducer';
 import sideMenuReducer from './side-menu/side-menu.reducer';
+import accountModalReducer from './account-modal/account-modal.reducer';
 
 const persistConfig = {
     key: 'root',
@@ -13,7 +14,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     user: userReducer,
-    sideMenu: sideMenuReducer
+    sideMenu: sideMenuReducer,
+    accountModal: accountModalReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);

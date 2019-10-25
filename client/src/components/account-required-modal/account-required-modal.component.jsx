@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 import './account-required-modal.styles.scss';
 
@@ -10,9 +10,9 @@ const AccountReqModal = ({ modalType, hidden }) => (
     'You need an account to access this page' : 
     'You need to have a premium account to use this feature'}
     </div>
-    <Link className='modal-button'> Log in </Link>
+    {/* <Link className='modal-button'> Log in </Link>
     <Link className='modal-button'> sign up </Link >
-    <Link className='modal-button'> close </Link >
+    <Link className='modal-button'> close </Link > */}
     </div>
 </div>
 

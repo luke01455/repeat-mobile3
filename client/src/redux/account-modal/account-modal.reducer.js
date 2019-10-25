@@ -4,7 +4,7 @@ const INITIAL_STATE = {
     type: 'off'
 };
 
-const sideMenuReducer = (state = INITIAL_STATE, action) => {
+const accountModalReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case AccountModalActionTypes.TOGGLE_MODAL_OFF:
             return {
@@ -26,4 +26,4 @@ const sideMenuReducer = (state = INITIAL_STATE, action) => {
     }
 }
 
-export default sideMenuReducer;
+export default accountModalReducer;
