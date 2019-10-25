@@ -10,10 +10,10 @@ const Menu = ({ hidden }) => {
   return (
     <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <div className='a-container'>
-        <a href="/">
+        <a href="/account">
           ACCOUNT
       </a>
-        <a href="/">
+        <a href="/settings">
           RECORDING SETTINGS
         </a>
         <a href="/premium">

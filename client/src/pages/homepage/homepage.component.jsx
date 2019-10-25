@@ -15,7 +15,7 @@ const HomePage = () => (
         <DiscImage />
         <CustomButton className="save-button"> Save </CustomButton>
         <div className="buttons-wrapper">
-        <div>SETTINGS</div>
+        <Link className="Link-container" to="/settings">SETTINGS</Link>
         <div>RECORDINGS</div>
         <Link className="Link-container" to="/premium">PREMIUM</Link>
         </div>

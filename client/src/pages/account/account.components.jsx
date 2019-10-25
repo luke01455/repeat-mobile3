@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './settings.styles.scss';
+import './account.styles.scss';
 
 const AccountPage = () => (
 <div className="account-container"> 

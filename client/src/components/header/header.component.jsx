@@ -27,7 +27,7 @@ const Header = ({ currentUser, signOutStart }) => {
         <div className='OptionContainer'>
             {
                 currentUser ? (
-                <Link className='OptionLink' to='/signin'>
+                <Link className='OptionLink' to='/account'>
                     {firstName[0].toUpperCase()}
                 </Link>
                 ) : (

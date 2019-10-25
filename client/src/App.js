@@ -7,6 +7,8 @@ import HomePage from './pages/homepage/homepage.component';
 import SignIn from './pages/sign-in/sign-in.component';
 import SignUp from './pages/sign-up/sign-up.component';
 import PremiumPage from './pages/premium/premium-component';
+import SettingsPage from './pages/settings/settings.component';
+import AccountPage from './pages/account/account.components';
 
 import Title from './components/title/title.component';
 import Header from './components/header/header.component';
@@ -77,6 +79,8 @@ const App = ({ checkUserSession, currentUser }) => {
                 )
               }
               />
+              <Route exact path='/settings' component={SettingsPage} />
+              <Route exact path='/account' component={AccountPage} />
       </Switch>
     </div>
   );
