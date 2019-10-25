@@ -1,7 +1,7 @@
 import AccountModalActionTypes from './account-modal.types';
 
 const INITIAL_STATE = {
-    type: 'off'
+    type: ''
 };
 
 const accountModalReducer = (state = INITIAL_STATE, action) => {
@@ -9,7 +9,7 @@ const accountModalReducer = (state = INITIAL_STATE, action) => {
         case AccountModalActionTypes.TOGGLE_MODAL_OFF:
             return {
                 ...state,
-                type: 'off'
+                type: ''
             }
         case AccountModalActionTypes.TOGGLE_MODAL_ACCOUNT:
             return {

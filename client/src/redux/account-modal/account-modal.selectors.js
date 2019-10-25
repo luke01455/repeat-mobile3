@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 
-const selectAccountModal = state => state.AccountModal;
+const selectAccountModal = state => state.accountModal;
 
-export const selectSideMenuHidden = createSelector(
+export const selectAccountModalType = createSelector(
     [selectAccountModal],
-    user => user.hidden
+    accountModal => accountModal.type
 )

@@ -30,4 +30,5 @@ const Menu = ({ hidden }) => {
 const mapStateToProps = createStructuredSelector({
   hidden: selectSideMenuHidden
 });
+
 export default connect(mapStateToProps)(Menu);

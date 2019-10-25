@@ -1,12 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 //import { Link } from 'react-router-dom';
+
+import { selectAccountModalType } from '../../redux/account-modal/account-modal.selectors';
 
 import './account-required-modal.styles.scss';
 
-const AccountReqModal = ({ modalType, hidden }) => (
-<div className={`styled-modal `}>
+const AccountReqModal = ({ modalType }) => (
+<div className={`styled-modal ${!modalType ? 'closed' : ''}`}>
     <div className='modal-container'>
-    <div className='modal-warning'> { modalType === 'Account' ? 
+    <div className='modal-warning'> { modalType === 'account' ? 
     'You need an account to access this page' : 
     'You need to have a premium account to use this feature'}
     </div>
@@ -15,7 +19,10 @@ const AccountReqModal = ({ modalType, hidden }) => (
     <Link className='modal-button'> close </Link > */}
     </div>
 </div>
-
 )
 
-export default AccountReqModal;
+const mapStateToProps = createStructuredSelector({
+    modalType: selectAccountModalType
+  });
+
+export default connect(mapStateToProps)(AccountReqModal);

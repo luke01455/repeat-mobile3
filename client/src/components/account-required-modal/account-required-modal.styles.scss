@@ -11,7 +11,8 @@
     border: 1px solid black;
 
     &.closed {
-        transform: translate(-100%);
+      transform: translateY(-100vh);
+      opacity: 0;
     }
 
     .modal-container {
