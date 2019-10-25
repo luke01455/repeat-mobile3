@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom'
 import DiscImage from '../../components/disc-image/disc-image.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import AccountReqModal from '../../components/account-required-modal/account-required-modal.component';
 
 import './homepage.styles.scss';
 
 const HomePage = () => (
     <div className="homepage-container">
+        <AccountReqModal />
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
