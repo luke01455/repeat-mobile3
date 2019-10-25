@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom'
 import DiscImage from '../../components/disc-image/disc-image.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
-import AccountReqModal from '../../components/account-required-modal/account-required-modal.component';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { toggleModalPremium } from '../../redux/account-modal/account-modal.actions';
 
 import './homepage.styles.scss';
 
-const HomePage = ({ currentUser }) => (
+const HomePage = ({ currentUser, toggleModalPremium }) => (
     <div className="homepage-container">
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
@@ -24,7 +24,7 @@ const HomePage = ({ currentUser }) => (
         <div>RECORDINGS</div>
         { currentUser ?
         <Link className="Link-container" to="/premium">PREMIUM</Link> :
-        <AccountReqModal />
+        <div onClick={toggleModalPremium} className="Link-container"> PREMIUM </div>
         }
         
         </div>
@@ -35,4 +35,8 @@ const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser
 });
 
-export default connect(mapStateToProps)(HomePage);
+const mapDispatchToProps = dispatch => ({
+    toggleModalPremium: () => dispatch(toggleModalPremium())
+  });
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

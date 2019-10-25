@@ -1,4 +1,4 @@
-import AccountModalActionTypes from './side-menu.types';
+import AccountModalActionTypes from './account-modal.types';
 
 export const toggleModalOff = () => ({
     type: AccountModalActionTypes.TOGGLE_MODAL_OFF

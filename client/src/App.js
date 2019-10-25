@@ -13,6 +13,7 @@ import AccountPage from './pages/account/account.components';
 import Title from './components/title/title.component';
 import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
+import AccountReqModal from './components/account-required-modal/account-required-modal.component';
 
 
 
@@ -33,6 +34,7 @@ const App = ({ checkUserSession, currentUser }) => {
       <Header />
       <Menu />
       <Title />
+      <AccountReqModal />
       <Switch>
       <Route
               exact
