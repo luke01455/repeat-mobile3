@@ -11,7 +11,7 @@ const Menu = ({ hidden }) => {
     <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <div className='a-container'>
         <a href="/">
-          ACCOUNT SETTINGS
+          ACCOUNT
       </a>
         <a href="/">
           RECORDING SETTINGS
