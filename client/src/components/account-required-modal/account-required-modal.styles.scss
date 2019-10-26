@@ -21,6 +21,11 @@
       margin-top: 15px;
       margin-left: 5px;
 
+    .modal-button-container {
+      display: flex;
+      flex-direction: column;
+    }
+
       .modal-warning {
         font-size: 15px;
         text-transform: uppercase;
@@ -30,7 +35,7 @@
         text-decoration: none;
       }
  
-        a {
+      .modal-button {
             font-size: 15px;
             text-transform: uppercase;
             padding: 10px 0;
