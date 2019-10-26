@@ -1,34 +1,43 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { Link } from 'react-router-dom';
 
 import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
+import { toggleModalAccount } from '../../redux/account-modal/account-modal.actions';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import './menu.styles.scss';
 
-const Menu = ({ hidden }) => {
+const Menu = ({ hidden, toggleModalAccount, currentUser }) => {
   return (
     <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <div className='a-container'>
-        <a href="/account">
-          ACCOUNT
-      </a>
-        <a href="/settings">
+      { currentUser ?
+        <Link className="menu-link" to="/premium">ACCOUNT</Link> :
+        <div onClick={toggleModalAccount} className="menu-link"> ACCOUNT </div>
+        }
+        <Link className="menu-link" to="/settings">
           RECORDING SETTINGS
-        </a>
-        <a href="/premium">
+        </Link>
+        <Link className="menu-link" to="/premium">
           GO PREMIUM
-        </a>
-        <a href="/">
+        </Link>
+        <Link className="menu-link" to="/">
           CONTACT
-        </a>
+        </Link>
       </div>
     </div>
   )
 }
 
 const mapStateToProps = createStructuredSelector({
-  hidden: selectSideMenuHidden
+  hidden: selectSideMenuHidden,
+  currentUser: selectCurrentUser
 });
 
-export default connect(mapStateToProps)(Menu);
+const mapDispatchToProps = dispatch => ({
+  toggleModalAccount: () => dispatch(toggleModalAccount())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
