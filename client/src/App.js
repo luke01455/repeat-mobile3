@@ -9,6 +9,7 @@ import SignUp from './pages/sign-up/sign-up.component';
 import PremiumPage from './pages/premium/premium-component';
 import SettingsPage from './pages/settings/settings.component';
 import AccountPage from './pages/account/account.components';
+import ContactPage from './pages/contact/contact.component';
 
 import Title from './components/title/title.component';
 import Header from './components/header/header.component';
@@ -84,6 +85,7 @@ const App = ({ checkUserSession, currentUser }) => {
               />
               <Route exact path='/settings' component={SettingsPage} />
               <Route exact path='/account' component={AccountPage} />
+              <Route exact path='/contact' component={ContactPage} />
       </Switch>
     </div>
   );
