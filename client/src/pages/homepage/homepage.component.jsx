@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { Link } from 'react-router-dom'
 
 import DiscImage from '../../components/disc-image/disc-image.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
@@ -21,11 +20,11 @@ const HomePage = ({ currentUser, toggleModalAccount }) => (
         <DiscImage />
         <CustomButton className="save-button"> Save </CustomButton>
         <div className="buttons-wrapper">
-        <Link className="Link-container" to="/settings">SETTINGS</Link>
-        <div>RECORDINGS</div>
+        <IconButton to="/settings" imagetype='settings'>Settings</IconButton>
+        <IconButton type='button' imagetype='recordings'>Recordings</IconButton>
         { currentUser ?
         <IconButton type='button' to='/premium'> PREMIUM </IconButton> :
-        <IconButton type='button' onClick={toggleModalAccount}> PREMIUM </IconButton>
+        <IconButton type='button' onClick={toggleModalAccount} imagetype='premium'> Premium </IconButton>
         }
         
         </div>

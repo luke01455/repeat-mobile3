@@ -16,8 +16,6 @@ import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
 import AccountReqModal from './components/account-required-modal/account-required-modal.component';
 
-
-
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
