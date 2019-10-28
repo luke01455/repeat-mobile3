@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import DiscImage from '../../components/disc-image/disc-image.component';
 import RangeBar from '../../components/range-bar/range-bar.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import IconButton from '../../components/icon-button/icon-button.component';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { toggleModalAccount } from '../../redux/account-modal/account-modal.actions';
@@ -23,8 +24,8 @@ const HomePage = ({ currentUser, toggleModalAccount }) => (
         <Link className="Link-container" to="/settings">SETTINGS</Link>
         <div>RECORDINGS</div>
         { currentUser ?
-        <Link className="Link-container" to="/premium">PREMIUM</Link> :
-        <div onClick={toggleModalAccount} className="Link-container"> PREMIUM </div>
+        <IconButton type='button' to='/premium'> PREMIUM </IconButton> :
+        <IconButton type='button' onClick={toggleModalAccount}> PREMIUM </IconButton>
         }
         
         </div>
