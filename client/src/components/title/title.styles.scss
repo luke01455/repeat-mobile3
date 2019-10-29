@@ -24,6 +24,19 @@
       border-radius: 100px;
       width: 185px;
       height: 185px;
+      box-shadow: 12px 22px 45px 7px #c0e6fa;
+
+      .title {
+        font-family: "Caveat", Times, serif;
+        top: 105px;
+        left: 36px;
+        position: relative;
+        z-index: 2;
+        font-size: 34px;
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
     }
   }
 }

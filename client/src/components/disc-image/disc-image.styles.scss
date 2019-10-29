@@ -1,12 +1,14 @@
 .cd-container {
-    margin-left: 85px;
+    margin: auto;
     position: relative;
-    z-index: -1;
+    z-index: 1;
+    top: 28px;
+    left: 28px;
   }
 
   .App-logo {
     animation: App-logo-spin infinite 9s linear;
-    height: 120px;
+    height: 130px;
     pointer-events: none;
     min-height: 85px;
   }

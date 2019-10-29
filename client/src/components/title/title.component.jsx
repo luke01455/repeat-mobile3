@@ -10,7 +10,7 @@ const Title = () => (
 </div>
 <Link className="logo-container" to="/">        
         <div className="logo">
-
+        <div className="title"> Repeat20 </div>
         </div>
          </Link>
 </div>
