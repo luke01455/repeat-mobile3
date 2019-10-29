@@ -8,20 +8,23 @@ import './icon-button.styles.scss';
 const IconButton = ({children, ...props}) => {
 
     let imageLocation = settingsicon;
+    let iconType = '';
 
     if(props.imagetype === 'premium') {
         imageLocation = premiumicon;
+        iconType = 'premiumIcon'
     } else if(props.imagetype === 'settings'){
         imageLocation = settingsicon;
+        iconType = 'settingsIcon'
     } else {
-        imageLocation = recordingsicon;
-        
+        imageLocation = recordingsicon;  
+        iconType = 'recordingsIcon'  
     }
 
     return(
     <div className='icon-button-container' {...props}>
         <div className='image-container'> 
-        <img src={imageLocation} className='icon-image' alt='icon'/>
+        <img src={imageLocation} className={iconType} alt='icon'/>
         </div>
         <div className='text-container'> {children} </div>
     </div>
