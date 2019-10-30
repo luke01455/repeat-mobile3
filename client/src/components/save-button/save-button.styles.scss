@@ -1,10 +1,16 @@
 .button-container {
-    width: 150px;
-    height: 50px;
-    background-color: #69bdec;
-    text-align: center;
-    color: white;
-    border-radius: 15px;
-    line-height: 45px;
-    margin: auto;
+    min-width: 320px;
+
+
+    .save-button {
+        width: 183px;
+        height: 43px;
+        background-color: #69bdec;
+        text-align: center;
+        color: white;
+        border-radius: 15px;
+        line-height: 42px;
+        margin: auto;
+    }
+    
 }

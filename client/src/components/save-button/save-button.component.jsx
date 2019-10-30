@@ -4,7 +4,9 @@ import './save-button.styles.scss';
 
 const SaveButton = () => (
     <div className='button-container'>
-        Save
+        <div className='save-button'>
+    Save
+        </div>
     </div>
 )
 
