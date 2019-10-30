@@ -4,6 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import RangeBar from '../../components/range-bar/range-bar.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import SaveButton from '../../components/save-button/save-button.component';
 import IconButton from '../../components/icon-button/icon-button.component';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
@@ -16,7 +17,7 @@ const HomePage = ({ currentUser, toggleModalAccount }) => (
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
-        <CustomButton className="save-button"> Save </CustomButton>
+        <SaveButton className="save-button"></SaveButton>
         <div className="buttons-wrapper">
         <IconButton to="/settings" imagetype='settings'>Settings</IconButton>
         <IconButton type='button' imagetype='recordings'>Recordings</IconButton>
