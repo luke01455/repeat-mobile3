@@ -14,9 +14,11 @@ import './homepage.styles.scss';
 
 const HomePage = ({ currentUser, toggleModalAccount }) => (
     <div className="homepage-container">
+        <div className="center-container">
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
+        </div>
         <SaveButton className="save-button"></SaveButton>
         <div className="buttons-wrapper">
         <IconButton to="/settings" imagetype='settings'>Settings</IconButton>

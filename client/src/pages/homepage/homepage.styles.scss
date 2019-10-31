@@ -1,40 +1,42 @@
 .homepage-container {
-margin: auto;
-max-width: 450px;
-width: 85vw;
-min-width: 150px;
+  margin: auto;
+  max-width: 450px;
+  //width: 85vw;
+  min-width: 150px;
+
+
+.center-container {
+    min-width: 340px;
+    margin: auto;
+    text-align: center;
+
+  .save-past-text {
+    margin-top: 55px;
+  }
+
+  .minutes-text {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
 }
 
-.save-past-text {
-margin-top: 55px;
-margin-left: 95px;
-}
-
-.save-button {
-margin-top: 20px;
-margin-left: 60px;
-}
-
-.minutes-text {
-margin-top: 20px;
-margin-left: 97px;
-font-size: 1.2em;
-}
 
 .buttons-wrapper {
-    min-width: 320px;
-    margin: auto;
-    margin-top: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-    div {
-    }
+  min-width: 320px;
+  margin: auto;
+  margin-top: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  div {
+  }
 }
 
 // hacky this needs fixing
 .Link-container {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
 }
