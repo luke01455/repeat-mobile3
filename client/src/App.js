@@ -11,7 +11,6 @@ import SettingsPage from './pages/settings/settings.component';
 import AccountPage from './pages/account/account.components';
 import ContactPage from './pages/contact/contact.component';
 
-import Title from './components/title/title.component';
 import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
 import AccountReqModal from './components/account-required-modal/account-required-modal.component';
@@ -32,7 +31,6 @@ const App = ({ checkUserSession, currentUser }) => {
     <div className="App">
       <Header />
       <Menu />
-      <Title />
       <AccountReqModal />
       <Switch>
       <Route

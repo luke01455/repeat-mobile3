@@ -8,7 +8,7 @@ import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors'
 import './menu-button.styles.css';
 
 const MenuButton = ({ toggleSideMenuHidden, hidden }) => (
-<div onClick={toggleSideMenuHidden} className="MenuButtonContainer">
+<div onClick={toggleSideMenuHidden} className={`MenuButtonContainer ${!hidden ? 'is-active' : ''}`}>
   <button className={`hamburger hamburger--3dy ${!hidden ? 'is-active' : ''}`} type="button">
     <span className="hamburger-box">
       <span className="hamburger-inner"></span>

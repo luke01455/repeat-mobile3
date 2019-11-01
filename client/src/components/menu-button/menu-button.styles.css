@@ -77,8 +77,10 @@
     background-color: transparent !important;
     transform: rotateX(-180deg); }
     .hamburger--3dy.is-active .hamburger-inner::before {
+      background-color: white;
       transform: translate3d(0, 10px, 0) rotate(45deg); }
     .hamburger--3dy.is-active .hamburger-inner::after {
+      background-color: white;
       transform: translate3d(0, -10px, 0) rotate(-45deg); }
   
  

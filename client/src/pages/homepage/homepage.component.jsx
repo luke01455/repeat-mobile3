@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import RangeBar from '../../components/range-bar/range-bar.component';
-import CustomButton from '../../components/custom-button/custom-button.component';
+import Title from '../../components/title/title.component';
 import SaveButton from '../../components/save-button/save-button.component';
 import IconButton from '../../components/icon-button/icon-button.component';
 
@@ -14,6 +14,7 @@ import './homepage.styles.scss';
 
 const HomePage = ({ currentUser, toggleModalAccount }) => (
     <div className="homepage-container">
+        <Title />
         <div className="center-container">
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
