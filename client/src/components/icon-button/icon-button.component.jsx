@@ -23,10 +23,11 @@ const IconButton = ({children, ...props}) => {
 
     return(
     <div className='icon-button-container' {...props}>
+        
         <div className='image-container'> 
         <img src={imageLocation} className={iconType} alt='icon'/>
         </div>
-        <div className='text-container'> {children} </div>
+        <div className='text-container'> {children}  </div>
     </div>
     )
 }

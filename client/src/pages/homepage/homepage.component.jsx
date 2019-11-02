@@ -22,7 +22,7 @@ const HomePage = ({ currentUser, toggleModalAccount }) => (
         </div>
         <SaveButton className="save-button"></SaveButton>
         <div className="buttons-wrapper">
-        <IconButton to="/settings" imagetype='settings'>Settings</IconButton>
+        <IconButton type='button' to='/settings' imagetype='settings'>Settings</IconButton>
         <IconButton type='button' imagetype='recordings'>Recordings</IconButton>
         { currentUser ?
         <IconButton type='button' to='/premium'> PREMIUM </IconButton> :

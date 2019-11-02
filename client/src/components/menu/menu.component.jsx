@@ -30,7 +30,7 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden })
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/premium">
           GO PREMIUM
         </Link>
-        <Link className="menu-link" onClick={toggleSideMenuHidden} to="/">
+        <Link className="menu-link" onClick={toggleSideMenuHidden} to="/contact">
           CONTACT
         </Link>
       </div>

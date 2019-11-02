@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FormInput from '../../components/form-input/form-input.component';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 import './contact.styles.scss';
 
@@ -48,7 +49,7 @@ class ContactPage extends React.Component {
                         label="message"
                         handleChange={this.handleChange}
                     />
-                    <button className='submit-button'>SUBMIT</button>
+                    <CustomButton className='submit-button' type='submit'> SIGN UP </CustomButton>
 
                 </form>
 
