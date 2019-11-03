@@ -1,12 +1,23 @@
 .settings-container {
     
+    .settings-title {
+        margin: 10px 51px;
+        margin-top: 35px;
+        font-size: 1.7em;
+        text-align: left;
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+
+    .list-container {
+        display: flex;
+        flex-direction: column;
+
+        .list-item {
+            margin: 5px 10px;
+            padding: 10px 5px 10px 5px;
+            border: 1px solid black;
+        }
+    }
 }
 
-.settings-title {
-    margin: 10px 51px;
-    margin-top: 35px;
-    font-size: 1.7em;
-    text-align: left;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
