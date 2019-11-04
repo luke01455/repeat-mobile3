@@ -17,13 +17,14 @@ const config = {
 
     const userRef = firestore.doc(`user/${userAuth.uid}`);
     const snapShot = await userRef.get();
-   
+    
     if(!snapShot.exists) {
       const { displayName, email } = userAuth;
       const createdAt = new Date();
+      const premiumStatus = 0;
 
       try {
-        await userRef.set({ displayName, email, createdAt, ...additionalData})
+        await userRef.set({ displayName, email, createdAt, premiumStatus, ...additionalData})
       } catch (error ) {
         console.log('error creating user', error.message)
       }
