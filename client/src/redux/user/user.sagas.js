@@ -4,7 +4,7 @@ import UserActionTypes from './user.types';
 
 import { signInSuccess, signInFailure, signOutSuccess, signOutFailure, signUpFailure, signUpSuccess } from './user.actions';
 
-import { googleProvider, auth, createUserProfileDocument, getCurrentUser } from '../../firebase/firebase.utils';
+import { googleProvider, auth, createUserProfileDocument, getCurrentUser, makeUserPremium } from '../../firebase/firebase.utils';
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
     try {
@@ -64,6 +64,16 @@ export function* signUp({payload: { email, password, displayName}}) {
 
 }
 
+export function* upgradePremium() {
+    try {
+        const userAuth = yield getCurrentUser();
+        yield call(makeUserPremium, userAuth);
+
+    } catch(error) {
+        yield put(signInFailure(error));
+    }
+}
+
 export function* signInAfterSignUp({payload: { user, additionalData } }) {
     yield getSnapshotFromUserAuth(user, additionalData);
 }
@@ -92,6 +102,10 @@ export function* onSignUpSuccess() {
     yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp)
 }
 
+export function* onUpgradePremiumStart() {
+    yield takeLatest(UserActionTypes.UPGRADE_PREMIUM_START, upgradePremium)
+}
+
 export function* userSagas() {
     yield all([
         call(onGoogleSignInStart),
@@ -99,6 +113,7 @@ export function* userSagas() {
         call(isUserAuthenticated),
         call(onSignOutStart),
         call(onSignUpStart),
-        call(onSignUpSuccess)
+        call(onSignUpSuccess),
+        call(onUpgradePremiumStart)
     ]);
 }

@@ -24,6 +24,10 @@ const userReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 error: action.payload
             };
+        case UserActionTypes.UPGRADE_PREMIUM_START:
+            return {
+                ...state
+            }
         default:
             return state;
     }

@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
+import makeUserPremium from '../../firebase/firebase.utils';
+
 import { toggleSideMenuHidden } from '../../redux/side-menu/side-menu.actions';
 import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
 import { toggleModalAccount } from '../../redux/account-modal/account-modal.actions';
@@ -10,7 +12,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import './menu.styles.scss';
 
-const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden }) => {
+const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, makeUserPremium }) => {
 
   const startModalToggleMenu = () => {
     toggleModalAccount();
@@ -27,7 +29,9 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden })
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/settings">
           RECORDING SETTINGS
         </Link>
-        <Link className="menu-link" onClick={toggleSideMenuHidden} to="/premium">
+        <Link className="menu-link" onClick={ toggleSideMenuHidden
+         // , makeUserPremium(userAuth)
+        } to="/premium">
           GO PREMIUM
         </Link>
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/contact">
