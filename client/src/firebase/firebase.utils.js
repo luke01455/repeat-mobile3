@@ -72,6 +72,27 @@ const config = {
     })
   }
 
+  export const makeUserPremium = async (userAuth) => {
+    if (!userAuth) return;
+
+    const userRef = firestore.doc(`user/${userAuth.uid}`);
+    const snapShot = await userRef.get();
+    
+    if(!snapShot.exists) {
+      const premiumStatus = 1;
+
+      try {
+        await userRef.set({premiumStatus})
+      } catch (error ) {
+        console.log('error adding premium membership', error.message)
+      }
+    }
+
+    return userRef;
+  };
+  
+
+
   firebase.initializeApp(config);
 
   export const auth = firebase.auth();
