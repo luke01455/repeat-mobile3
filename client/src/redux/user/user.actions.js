@@ -52,7 +52,6 @@ export const signUpFailure = error => ({
     payload: error
 });
 
-export const premiumUpgradeSuccess = user => ({
-    type: UserActionTypes.UPGRADE_PREMIUM_START,
-    payload: user
+export const premiumUpgradeStart = () => ({
+    type: UserActionTypes.UPGRADE_PREMIUM_START
 });

@@ -3,19 +3,24 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
-import makeUserPremium from '../../firebase/firebase.utils';
 
 import { toggleSideMenuHidden } from '../../redux/side-menu/side-menu.actions';
 import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
 import { toggleModalAccount } from '../../redux/account-modal/account-modal.actions';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
+import { premiumUpgradeStart } from '../../redux/user/user.actions';
 
 import './menu.styles.scss';
 
-const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, makeUserPremium }) => {
+const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, premiumUpgradeStart }) => {
 
   const startModalToggleMenu = () => {
     toggleModalAccount();
+    toggleSideMenuHidden();
+  }
+
+  const startPremiumAndToggleModal = () => {
+    premiumUpgradeStart();
     toggleSideMenuHidden();
   }
 
@@ -29,9 +34,7 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, m
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/settings">
           RECORDING SETTINGS
         </Link>
-        <Link className="menu-link" onClick={ toggleSideMenuHidden
-         // , makeUserPremium(userAuth)
-        } to="/premium">
+        <Link className="menu-link" onClick={ startPremiumAndToggleModal } to="/premium">
           GO PREMIUM
         </Link>
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/contact">
@@ -49,7 +52,8 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
   toggleModalAccount: () => dispatch(toggleModalAccount()),
-  toggleSideMenuHidden: () => dispatch(toggleSideMenuHidden())
+  toggleSideMenuHidden: () => dispatch(toggleSideMenuHidden()),
+  premiumUpgradeStart: () => dispatch(premiumUpgradeStart())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);

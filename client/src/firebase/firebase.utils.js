@@ -2,6 +2,10 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from '../redux/user/user.selectors';
+
 const config = {
     apiKey: "AIzaSyDJcJ82mrvdk0et-Ld_Cw-ZXAWGlM2xP_o",
     authDomain: "crwn-datab.firebaseapp.com",
@@ -74,20 +78,25 @@ const config = {
 
   export const makeUserPremium = async (userAuth) => {
     if (!userAuth) return;
-
+    console.log(userAuth)
     const userRef = firestore.doc(`user/${userAuth.uid}`);
     const snapShot = await userRef.get();
-    
-    if(!snapShot.exists) {
+    console.log("isdoing1")
+    if(snapShot.exists) {
+      const { displayName, email } = userAuth;
+      const createdAt = 0;
       const premiumStatus = 1;
-
+      console.log(displayName)
+      console.log(email)
+      console.log(userAuth)
       try {
-        await userRef.set({premiumStatus})
+        console.log("isdoing2")
+        await userRef.set({displayName, email, createdAt, premiumStatus})
       } catch (error ) {
         console.log('error adding premium membership', error.message)
       }
+    
     }
-
     return userRef;
   };
   
@@ -101,5 +110,8 @@ const config = {
   export const googleProvider = new firebase.auth.GoogleAuthProvider();
   googleProvider.setCustomParameters({ prompt: 'select_account' });
   export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
+
+
+
 
   export default firebase;

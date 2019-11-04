@@ -16,7 +16,8 @@ import './header.styles.scss';
 const Header = ({ currentUser, signOutStart }) => {
     let firstName = ''
     if(currentUser) {
-        firstName = currentUser.displayName.split(' ')
+       // firstName = currentUser.displayName.split(' ')
+       firstName = 'john'
     }
     
     return (
