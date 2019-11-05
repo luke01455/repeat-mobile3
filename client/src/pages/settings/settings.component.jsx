@@ -14,15 +14,15 @@ const SettingsPage = () => (
                  </span>
             <span className='list-item'>
                  HD / LQ / Power Saver 
-                 <ToggleSwitch />
+                 {/* <ToggleSwitch /> */}
                   </span>
             <span className='list-item'> 
             Cloud Storage 
-            <ToggleSwitch />
+            {/* <ToggleSwitch /> */}
             </span>
             <span className='list-item'>
                  Select Location
-                 <ToggleSwitch />
+                 {/* <ToggleSwitch /> */}
                  </span>
         </div>
     </div>

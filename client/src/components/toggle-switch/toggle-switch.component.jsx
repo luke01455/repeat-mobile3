@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import './toggle-switch.styles.scss';
+import Toggle from 'react-toggle'
 
-const ToggleSwitch = ({size}) => (
-<label className="cl-switch cl-switch-large cl-switch-red">
-  <input type="checkbox" unchecked/>
-  <span class="switcher"></span>
-  <span class="label">Toggle Switch</span>
-  
-</label>
+import './toggle-switch.styles.css';
 
-)
+const ToggleSwitch = () => {
+
+  const [toggleValue, setToggleValue] = useState(0)
+
+  console.log(toggleValue);
+  return (
+    <div>
+      <label>
+        <Toggle
+          defaultChecked={true}
+          onChange={() => setToggleValue({toggleValue: !toggleValue})} />
+      </label>
+    </div>
+  );
+}
+
 
 export default ToggleSwitch;
