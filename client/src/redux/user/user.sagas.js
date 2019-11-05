@@ -4,17 +4,20 @@ import UserActionTypes from './user.types';
 
 import { signInSuccess, signInFailure, signOutSuccess, signOutFailure, signUpFailure, signUpSuccess } from './user.actions';
 
-import { googleProvider, auth, createUserProfileDocument, getCurrentUser, makeUserPremium } from '../../firebase/firebase.utils';
+import { googleProvider, auth, createUserProfileDocument, getCurrentUser, makeUserPremium} from '../../firebase/firebase.utils';
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
     try {
+        
         const userRef = yield call(createUserProfileDocument, userAuth, additionalData);
         const userSnapshot = yield userRef.get();
         yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data()})
         );
     } catch(error) {
+        
         yield put(signInFailure(error));
     }
+    
 }
 
 export function* signInWithGoogle() {
@@ -64,10 +67,11 @@ export function* signUp({payload: { email, password, displayName}}) {
 
 }
 
-export function* upgradePremium() {
+export function* upgradePremium({payload: userName }) {
     try {
         const userAuth = yield getCurrentUser();
-        yield call(makeUserPremium, userAuth);
+        console.log("doing saga")
+        yield call(makeUserPremium, userAuth, userName);
 
     } catch(error) {
         yield put(signInFailure(error));

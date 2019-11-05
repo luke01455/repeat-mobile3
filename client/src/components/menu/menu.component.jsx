@@ -20,7 +20,8 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, p
   }
 
   const startPremiumAndToggleModal = () => {
-    premiumUpgradeStart();
+    console.log(currentUser.displayName);
+    premiumUpgradeStart(currentUser.displayName);
     toggleSideMenuHidden();
   }
 
@@ -53,7 +54,7 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = dispatch => ({
   toggleModalAccount: () => dispatch(toggleModalAccount()),
   toggleSideMenuHidden: () => dispatch(toggleSideMenuHidden()),
-  premiumUpgradeStart: () => dispatch(premiumUpgradeStart())
+  premiumUpgradeStart: userName => dispatch(premiumUpgradeStart(userName))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);

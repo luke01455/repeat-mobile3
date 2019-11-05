@@ -2,9 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { selectCurrentUser } from '../redux/user/user.selectors';
+
 
 const config = {
     apiKey: "AIzaSyDJcJ82mrvdk0et-Ld_Cw-ZXAWGlM2xP_o",
@@ -76,22 +74,22 @@ const config = {
     })
   }
 
-  export const makeUserPremium = async (userAuth) => {
+  export const makeUserPremium = async (userAuth, userName) => {
     if (!userAuth) return;
-    console.log(userAuth)
     const userRef = firestore.doc(`user/${userAuth.uid}`);
     const snapShot = await userRef.get();
     console.log("isdoing1")
     if(snapShot.exists) {
-      const { displayName, email } = userAuth;
+
+      const { email } = userAuth;
       const createdAt = 0;
+      const displayName = userName;
       const premiumStatus = 1;
-      console.log(displayName)
-      console.log(email)
-      console.log(userAuth)
+      
       try {
         console.log("isdoing2")
-        await userRef.set({displayName, email, createdAt, premiumStatus})
+        console.log(userName)
+        await userRef.set({ displayName, email, createdAt, premiumStatus})
       } catch (error ) {
         console.log('error adding premium membership', error.message)
       }
@@ -99,7 +97,6 @@ const config = {
     }
     return userRef;
   };
-  
 
 
   firebase.initializeApp(config);
