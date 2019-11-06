@@ -14,7 +14,11 @@ return (
             <span>
                 {children}
             </span>
-            <img src={rightarrowicon} className='right-arrow' alt='icon'/>
+            
+            { !props.noArrow ?
+            <img src={rightarrowicon} className='right-arrow' alt='icon'/> :
+            <span> </span>
+            }
         </span>
     </Link>
 )

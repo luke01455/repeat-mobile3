@@ -28,15 +28,18 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, p
   return (
     <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <div className='a-container'>
-      { currentUser ?
-        <Link className="menu-link" onClick={toggleSideMenuHidden} to="/account">ACCOUNT</Link> :
-        <div onClick={startModalToggleMenu} className="menu-link"> ACCOUNT </div>
+        <Link className="menu-link" onClick={toggleSideMenuHidden} to="/">
+          HOME
+        </Link>
+        {currentUser ?
+          <Link className="menu-link" onClick={toggleSideMenuHidden} to="/account">ACCOUNT</Link> :
+          <div onClick={startModalToggleMenu} className="menu-link"> ACCOUNT </div>
         }
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/settings">
-          RECORDING SETTINGS
+          SETTINGS
         </Link>
-        <Link className="menu-link" onClick={ toggleSideMenuHidden } to="/premium">
-          GO PREMIUM
+        <Link className="menu-link" onClick={toggleSideMenuHidden} to="/premium">
+          PREMIUM
         </Link>
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/contact">
           CONTACT

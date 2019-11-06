@@ -10,10 +10,21 @@ const SettingsPage = () => (
     <div className="settings-container">
         <div className='settings-title'> Settings </div>
         <div className='list-container'>
+
             <SettingsHeading> User Options </SettingsHeading>
-            <SettingsOption type='button' linkLocation='premium'> Recordings Options </SettingsOption>
+            <SettingsOption type='button' linkLocation='premium'> My Account </SettingsOption>
             <SettingsOption> App Notification Settings </SettingsOption>
             <SettingsOption> Change Password </SettingsOption>
+
+            <SettingsHeading> Feedback </SettingsHeading>
+            <SettingsOption> Send us your feedback</SettingsOption>
+            <SettingsOption> Rate the app </SettingsOption>
+            <SettingsOption> Share the app </SettingsOption>
+
+            <SettingsHeading> Terms & conditions </SettingsHeading>
+            <SettingsOption> Privacy Policy </SettingsOption>
+            <SettingsOption noArrow='true'> Sign Out </SettingsOption>
+            <SettingsOption noArrow='true'> Version: 1.0.0.2 </SettingsOption>
         </div>
     </div>
 )
