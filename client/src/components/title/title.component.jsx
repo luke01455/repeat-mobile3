@@ -12,7 +12,7 @@ const Title = () => (
         </div>
         <Link className="logo-container" to="/">
             <div className="logo">
-                <img className='logo-img' src={logoImg}></img>
+                <img className='logo-img' src={logoImg} alt='logo'></img>
                 <div className="title"> Repeat20 </div>
             </div>
         </Link>
