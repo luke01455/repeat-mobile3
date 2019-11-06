@@ -1,15 +1,16 @@
-.settings-option-container {
+.settings-heading-container {
     display: flex;
     color: black;
     text-decoration: none;
 
-    .settings-option {
+    .settings-heading {
+        font-weight: bold;
         width: 100vw;
         display: flex;
         justify-content: space-between;
         margin: 5px 10px;
         padding: 10px 5px 10px 5px;
-        border-bottom: 1px solid rgba(19, 16, 16, 0.2);
+        border-bottom: 1px solid rgba(19, 16, 16, 1);
 
         .right-arrow {
             width: 11px;
