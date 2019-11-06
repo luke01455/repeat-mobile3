@@ -8,7 +8,7 @@ const SettingsPage = () => (
     <div className="settings-container">
         <div className='settings-title'> Settings </div>
         <div className='list-container'>
-            <SettingsOption> Recordings Options </SettingsOption>
+            <SettingsOption type='button' linkLocation='premium'> Recordings Options </SettingsOption>
             <SettingsOption> App Notification Settings </SettingsOption>
             <SettingsOption> Change Password </SettingsOption>
         </div>
