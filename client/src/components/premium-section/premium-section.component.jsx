@@ -7,12 +7,12 @@ const PremiumSection = () => (
 <div className="premium-section-container"> 
     <div className='PremiumTitle'> Premium </div>
     <div className='PremiumDescription'> The benefits to becoming a Premium member: </div>
-    <ul className='ListContainer'>
-        <li> HD and Power Saver recording </li>
-        <li> Optional Cloud Storage</li>
-        <li> Location based recording option</li>
-        <li> Help support the team! </li>
-    </ul>
+    <div className='ListContainer'>
+        <p> HD and Power Saver recording </p>
+        <p> Optional Cloud Storage</p>
+        <p> Location based recording option</p>
+        <p> Help support the team! </p>
+    </div>
 </div>
 </div>
 )
