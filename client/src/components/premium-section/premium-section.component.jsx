@@ -3,7 +3,8 @@ import React from 'react';
 import './premium-section.styles.scss';
 
 const PremiumSection = () => (
-<div className="premium-container"> 
+<div className='centraliser'>
+<div className="premium-section-container"> 
     <div className='PremiumTitle'> Premium </div>
     <div className='PremiumDescription'> The benefits to becoming a Premium member: </div>
     <ul className='ListContainer'>
@@ -12,6 +13,7 @@ const PremiumSection = () => (
         <li> Location based recording option</li>
         <li> Help support the team! </li>
     </ul>
+</div>
 </div>
 )
 
