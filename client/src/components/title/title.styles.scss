@@ -3,9 +3,11 @@
   height: 175px;
   width: 100vw;
   min-width: 335px;
+  max-width: 450px;
 
   .background-container {
     position: relative;
+    max-width: 450px;
     top: 85px;
     width: 100vw;
     height: 50px;
