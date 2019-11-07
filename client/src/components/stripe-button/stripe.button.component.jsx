@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
 const StripeCheckoutButton = () => {
-  const priceForStripe =  120;
+  const priceForStripe =  5.99;
   const publishableKey = 'pk_test_cqtkHDocT0855HhYgqzTfvot00yeJKO2Ca';
 
   const onToken = token => {
@@ -28,18 +28,20 @@ const StripeCheckoutButton = () => {
   };
 
   return (
+    <div className='stripe-button-container'>
     <StripeCheckout
-      label='Pay Now'
+      label='Pay Now: $5.99'
       name='CRWN Clothing Ltd.'
       billingAddress
       shippingAddress
       image='https://svgshare.com/i/CUz.svg'
-      description={`Your total is $$ ${priceForStripe}`}
+      description={`Your total is $${priceForStripe}`}
       amount={priceForStripe}
       panelLabel='Pay Now'
       token={onToken}
       stripeKey={publishableKey}
     />
+    </div>
   );
 };
 
