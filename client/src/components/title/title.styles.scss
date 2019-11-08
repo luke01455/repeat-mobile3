@@ -7,6 +7,7 @@
 
   .background-container {
     position: relative;
+    z-index: -2;
     max-width: 450px;
     top: 85px;
     width: 100vw;
@@ -22,6 +23,8 @@
     height: 100%;
 
     .logo {
+      position: relative;
+      z-index: -1;
       margin: auto;
       background: rgb(104,132,255);
       background: linear-gradient(90deg, rgba(104,132,255,1) 0%, rgba(80,153,219,1) 50%, rgba(45,198,225,1) 100%);
