@@ -10,6 +10,7 @@ import PremiumPage from './pages/premium/premium-component';
 import SettingsPage from './pages/settings/settings.component';
 import AccountPage from './pages/account/account.components';
 import ContactPage from './pages/contact/contact.component';
+import RecordingSettings from './pages/recording-settings/recording-settings.component';
 
 import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
@@ -79,9 +80,11 @@ const App = ({ checkUserSession, currentUser }) => {
                 )
               }
               />
-              <Route exact path='/settings' component={SettingsPage} />
+              
               <Route exact path='/account' component={AccountPage} />
               <Route exact path='/contact' component={ContactPage} />
+              <Route exact path='/settings' component={SettingsPage} />
+              <Route exact path='/settings/recordingsettings' component={RecordingSettings} />
       </Switch>
     </div>
   );

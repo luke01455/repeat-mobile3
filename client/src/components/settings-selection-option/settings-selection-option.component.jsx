@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 
 import './settings-selection-option.styles.scss';
 
@@ -12,10 +13,10 @@ return (
                 {children}
             </span>
             
-            { !props.noArrow ?
+            {/* { !props.noArrow ?
             <img src={rightarrowicon} className='right-arrow' alt='icon'/> :
             <span> </span>
-            }
+            } */}
         </span>
     </Link>
 )
