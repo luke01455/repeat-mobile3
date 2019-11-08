@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
+import exitIcon from '../../images/exiticon.png';
+
 import { selectAccountModalType } from '../../redux/account-modal/account-modal.selectors';
 import { toggleModalOff } from '../../redux/account-modal/account-modal.actions';
 
@@ -10,7 +12,11 @@ import './account-required-modal.styles.scss';
 
 const AccountReqModal = ({ modalType, toggleModalOff}) => (
 <div className={`styled-modal ${!modalType ? 'closed' : ''}`}>
+
     <div className='modal-container'>
+    <img onClick={toggleModalOff} src={exitIcon} className='close-icon' alt='icon'/>
+    
+    
     <div className='modal-warning'> { modalType === 'account' ? 
     'You need an account to access this page' : 
     'You need to have a premium account to use this feature'}
@@ -29,7 +35,7 @@ const AccountReqModal = ({ modalType, toggleModalOff}) => (
     )
   
   }
-    <div className='modal-button' to='/' onClick={toggleModalOff}> close </div>
+
     </div>
     </div>
 )
