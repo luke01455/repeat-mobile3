@@ -13,6 +13,7 @@ const SettingsPage = () => (
 
             <SettingsHeading> User Options </SettingsHeading>
             <SettingsOption type='button' linkLocation='premium'> My Account </SettingsOption>
+            <SettingsOption> Recording Settings </SettingsOption>
             <SettingsOption> App Notification Settings </SettingsOption>
             <SettingsOption> Change Password </SettingsOption>
 
