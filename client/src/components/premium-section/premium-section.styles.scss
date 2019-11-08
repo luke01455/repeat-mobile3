@@ -4,13 +4,15 @@
     align-content: space-around;
     justify-content: center;
 .premium-section-container {
-    background-color: #EDFAFC;
+    background: rgb(230,247,247);
+background: linear-gradient(0deg, rgba(230,247,247,1) 0%, rgba(221,246,246,1) 45%, rgba(204,246,243,1) 100%);
     display: flex;
     align-content: center;
     flex-direction: column;
     width: 80vw;
     height: 70vh;
     border: 1px solid black;
+    border-radius: 4px;
     .PremiumTitle {
         margin-top: 20px;
         text-align: center;
