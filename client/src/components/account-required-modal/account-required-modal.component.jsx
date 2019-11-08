@@ -12,16 +12,16 @@ import './account-required-modal.styles.scss';
 
 const AccountReqModal = ({ modalType, toggleModalOff}) => (
 <div className={`styled-modal ${!modalType ? 'closed' : ''}`}>
-
+<img onClick={toggleModalOff} src={exitIcon} className='close-icon' alt='icon'/>
     <div className='modal-container'>
-    <img onClick={toggleModalOff} src={exitIcon} className='close-icon' alt='icon'/>
+    
     
     
     <div className='modal-warning'> { modalType === 'account' ? 
     'You need an account to access this page' : 
     'You need to have a premium account to use this feature'}
     </div>
-
+    <div className='modal-section-wrapper'>
     {    
     modalType === 'account' ? (
     <div className='modal-button-container'>
@@ -35,6 +35,7 @@ const AccountReqModal = ({ modalType, toggleModalOff}) => (
     )
   
   }
+  </div>
 
     </div>
     </div>
