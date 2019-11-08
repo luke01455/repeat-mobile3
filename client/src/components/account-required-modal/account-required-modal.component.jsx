@@ -25,13 +25,13 @@ const AccountReqModal = ({ modalType, toggleModalOff}) => (
     {    
     modalType === 'account' ? (
     <div className='modal-button-container'>
-    <Link className='modal-button' to='/signin'> Log in </Link>
-    <Link className='modal-button' to='/signup'> sign up </Link>
+    <Link className='modal-button' onClick={toggleModalOff} to='/signin'> Log in </Link>
+    <Link className='modal-button' onClick={toggleModalOff} to='/signup'> sign up </Link>
     </div>
     ) 
     :
     (
-    <Link className='modal-button' to='/premium'> Get premium </Link>
+    <Link className='modal-button' onClick={toggleModalOff} to='/premium'> Get premium </Link>
     )
   
   }
