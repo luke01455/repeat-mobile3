@@ -1,10 +1,15 @@
 .account-container {
 
 .header-section-container {
+    margin: 0px 15px 0px 15px;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid black;
+    background: rgb(230,247,247);
+    background: linear-gradient(0deg, rgba(230,247,247,1) 0%, rgba(221,246,246,1) 45%, rgba(204,246,243,1) 100%);
+    border-radius: 6px;
     .account-title {
-        color: #aec4f9;
         margin: 10px 51px;
-        margin-top: 35px;
+        margin-top: 5px;
         font-size: 1.7em;
         text-align: left;
         margin-bottom: 20px;
@@ -12,9 +17,11 @@
     }
 
     .name-email-container {
+        font-family: 'Chivo', sans-serif;
         margin-left: 30px;
         font-size: 17px;
         font-weight: bold;
+        text-transform: uppercase;
         .display-name {
             margin-top: 5px;
         }
