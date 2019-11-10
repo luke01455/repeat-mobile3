@@ -42,6 +42,7 @@ const App = ({ checkUserSession, currentUser }) => {
                   <HomePage /> 
                   //<SignIn/>    
                 ) : (
+                  //<SignIn/>
                   <HomePage /> 
                 )
               }
