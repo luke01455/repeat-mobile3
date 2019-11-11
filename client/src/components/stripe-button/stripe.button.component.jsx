@@ -34,7 +34,7 @@ const StripeCheckoutButton = () => {
       name='Repeat20 Ltd.'
       billingAddress
       shippingAddress
-      image='https://svgshare.com/i/CUz.svg'
+      //image='https://svgshare.com/i/CUz.svg'
       description={`Your total is $5.99`}
       amount={priceForStripe}
       panelLabel='Pay Now'
