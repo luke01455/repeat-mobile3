@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
 const StripeCheckoutButton = () => {
-  const priceForStripe =  5.99;
+  const priceForStripe =  599;
   const publishableKey = 'pk_test_cqtkHDocT0855HhYgqzTfvot00yeJKO2Ca';
 
   const onToken = token => {
