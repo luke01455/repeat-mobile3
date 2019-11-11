@@ -31,11 +31,11 @@ const StripeCheckoutButton = () => {
     <div className='stripe-button-container'>
     <StripeCheckout
       label='Pay Now: $5.99'
-      name='CRWN Clothing Ltd.'
+      name='Repeat20 Ltd.'
       billingAddress
       shippingAddress
       image='https://svgshare.com/i/CUz.svg'
-      description={`Your total is $${priceForStripe}`}
+      description={`Your total is $5.99`}
       amount={priceForStripe}
       panelLabel='Pay Now'
       token={onToken}
