@@ -20,7 +20,6 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, p
   }
 
   const startPremiumAndToggleModal = () => {
-    console.log(currentUser.displayName);
     premiumUpgradeStart(currentUser.displayName);
     toggleSideMenuHidden();
   }

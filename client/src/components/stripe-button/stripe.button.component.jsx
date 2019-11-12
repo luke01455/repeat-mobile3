@@ -1,9 +1,15 @@
 
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
+import { premiumUpgradeStart } from '../../redux/user/user.actions';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
-const StripeCheckoutButton = () => {
+const StripeCheckoutButton = ({ currentUser, premiumUpgradeStart }) => {
   const priceForStripe =  599;
   const publishableKey = 'pk_test_cqtkHDocT0855HhYgqzTfvot00yeJKO2Ca';
 
@@ -18,6 +24,7 @@ const StripeCheckoutButton = () => {
     })
       .then(response => {
         alert('succesful payment');
+        premiumUpgradeStart(currentUser.displayName);
       })
       .catch(error => {
         console.log('Payment Error: ', console.log(error));
@@ -44,4 +51,12 @@ const StripeCheckoutButton = () => {
   );
 };
 
-export default StripeCheckoutButton;
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  premiumUpgradeStart: userName => dispatch(premiumUpgradeStart(userName))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(StripeCheckoutButton);
