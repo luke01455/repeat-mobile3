@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import rightarrowicon from '../../images/rightarrow.png';
 
+
 import './settings-option.styles.scss';
 
 const SettingsOption = ({ children, ...props }) => {

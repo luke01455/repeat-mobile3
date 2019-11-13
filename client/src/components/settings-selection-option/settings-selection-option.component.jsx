@@ -2,23 +2,22 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import ToggleSwitch from '../toggle-switch/toggle-switch.component'
+
 import './settings-selection-option.styles.scss';
 
 const SettingsSelectionOption = ({ children, ...props }) => {
 
 return (
-    <Link className="settings-option-container" to={`/${props.linkLocation}`}>
+    <div className="settings-option-container" to={`/${props.linkLocation}`}>
         <span className="settings-option">
             <span>
                 {children}
             </span>
             
-            {/* { !props.noArrow ?
-            <img src={rightarrowicon} className='right-arrow' alt='icon'/> :
-            <span> </span>
-            } */}
+            <ToggleSwitch />
         </span>
-    </Link>
+    </div>
 )
 }
 
