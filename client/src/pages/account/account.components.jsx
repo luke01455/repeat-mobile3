@@ -28,12 +28,12 @@ const AccountPage = ({ currentUser }) => (
         </div>
 
         <SettingsHeading> Account Information </SettingsHeading>
-        <SettingsOption> Account </SettingsOption>
-        <SettingsOption> Personal Information </SettingsOption>
-        <SettingsOption> Change Password</SettingsOption>
+        <SettingsOption linkLocation='account'> Account </SettingsOption>
+        <SettingsOption linkLocation='account'> Personal Information </SettingsOption>
+        <SettingsOption linkLocation='account'> Change Password</SettingsOption>
 
         <SettingsHeading> Premium Information </SettingsHeading>
-        <SettingsOption> Premium </SettingsOption>
+        <SettingsOption linkLocation='account'> Premium </SettingsOption>
 
 
     </div>

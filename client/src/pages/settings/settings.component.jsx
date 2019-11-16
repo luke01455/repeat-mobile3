@@ -12,18 +12,18 @@ const SettingsPage = () => (
         <div className='list-container'>
 
             <SettingsHeading> User Options </SettingsHeading>
-            <SettingsOption type='button' linkLocation='premium'> My Account </SettingsOption>
+            <SettingsOption type='button' linkLocation='account'> My Account </SettingsOption>
             <SettingsOption type='button' linkLocation='settings/recordingsettings'> Recording Settings </SettingsOption>
-            <SettingsOption> App Notification Settings </SettingsOption>
-            <SettingsOption> Change Password </SettingsOption>
+            <SettingsOption type='button' linkLocation='settings'> App Notification Settings </SettingsOption>
+            <SettingsOption type='button' linkLocation='settings'> Change Password </SettingsOption>
 
             <SettingsHeading> Feedback </SettingsHeading>
-            <SettingsOption> Send us your feedback</SettingsOption>
-            <SettingsOption> Rate the app </SettingsOption>
-            <SettingsOption> Share the app </SettingsOption>
+            <SettingsOption type='button' linkLocation='settings'> Send us your feedback</SettingsOption>
+            <SettingsOption type='button' linkLocation='settings'> Rate the app </SettingsOption>
+            <SettingsOption type='button' linkLocation='settings'> Share the app </SettingsOption>
 
             <SettingsHeading> Terms & conditions </SettingsHeading>
-            <SettingsOption> Privacy Policy </SettingsOption>
+            <SettingsOption type='button' linkLocation='settings'> Privacy Policy </SettingsOption>
             <SettingsOption noArrow='true'> Sign Out </SettingsOption>
             <SettingsOption noArrow='true'> Version: 1.0.0.2 </SettingsOption>
         </div>
