@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import premiumicon from '../../images/premium_icon.png';
 import recordingsicon from '../../images/recordings_icon.png';
 import settingsicon from '../../images/settings_icon.png';
@@ -22,12 +25,12 @@ const IconButton = ({children, ...props}) => {
     }
 
     return(
-    <div className='icon-button-container' {...props}>
+    <Link className='icon-button-container' {...props}>
         <div className='image-container'> 
         <img src={imageLocation} className={iconType} alt='icon'/>
         </div>
         <div className='text-container'> {children}  </div>
-    </div>
+    </Link>
     )
 }
 
