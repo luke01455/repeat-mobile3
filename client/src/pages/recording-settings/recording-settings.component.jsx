@@ -8,9 +8,9 @@ const RecordingSettings = () => {
 return (
 <div>
 <div className='recording-settings-title'> RECORDING SETTINGS </div>
-    <SettingsSelectionOption> On / Off </SettingsSelectionOption>
-    <SettingsSelectionOption> HQ / LQ </SettingsSelectionOption>
-    <SettingsSelectionOption> Something Else </SettingsSelectionOption>
+    <SettingsSelectionOption userType="free"> On / Off </SettingsSelectionOption>
+    <SettingsSelectionOption userType="premium"> HQ / LQ </SettingsSelectionOption>
+    <SettingsSelectionOption userType="free"> Something Else </SettingsSelectionOption>
 </div>
 )
 }

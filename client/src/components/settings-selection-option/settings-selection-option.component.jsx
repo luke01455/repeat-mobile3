@@ -7,23 +7,27 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import './settings-selection-option.styles.scss';
 
-const SettingsSelectionOption = ({ children, currentUser, ...props }) => {
+const SettingsSelectionOption = ({ children, currentUser, userType, ...props }) => {
 
     let premiumStatus = 0;
     if(currentUser) {
         premiumStatus = currentUser.premiumStatus;
      }
 
+    const switchType = userType;
+    
 return (
     <div className="settings-option-container" to={`/${props.linkLocation}`}>
         <span className="settings-option">
             <span>
                 {children}
             </span>
-            { premiumStatus ? 
-            <ToggleSwitch />
-             : 
-            <span></span>}
+            { switchType === 'free' ? 
+            <ToggleSwitch /> : 
+            premiumStatus ?
+            <ToggleSwitch /> :
+             <span></span>
+             }
         </span>
     </div>
 )
@@ -35,3 +39,4 @@ const mapStateToProps = createStructuredSelector({
 
 
 export default connect(mapStateToProps)(SettingsSelectionOption);
+
