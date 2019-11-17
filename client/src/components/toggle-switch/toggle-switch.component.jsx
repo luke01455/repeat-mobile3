@@ -4,11 +4,11 @@ import Toggle from 'react-toggle'
 
 import './toggle-switch.styles.css';
 
-const ToggleSwitch = () => {
+const ToggleSwitch = ({ btnName }) => {
 
   const [toggleValue, setToggleValue] = useState(0)
 
-  console.log(toggleValue);
+ // console.log(toggleValue);
   return (
     <div>
       <label>

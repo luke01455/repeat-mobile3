@@ -8,8 +8,8 @@ const RecordingSettings = () => {
 return (
 <div>
 <div className='recording-settings-title'> RECORDING SETTINGS </div>
-    <SettingsSelectionOption userType="free"> On / Off </SettingsSelectionOption>
-    <SettingsSelectionOption userType="premium"> HQ / LQ </SettingsSelectionOption>
+    <SettingsSelectionOption btnName='onOffBtn' userType="free"> On / Off </SettingsSelectionOption>
+    <SettingsSelectionOption btnName='premiumBtn' userType="premium"> HQ / LQ </SettingsSelectionOption>
     <SettingsSelectionOption userType="free"> Something Else </SettingsSelectionOption>
 </div>
 )

@@ -35,10 +35,9 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
         <IconButton type='button' to='/settings' imagetype='settings'>Settings</IconButton>
         <IconButton type='button' to='/' imagetype='recordings' onClick={openRecordings} >Recordings</IconButton>
         { currentUser ?
-        <IconButton type='button' to='/premium'> Premium </IconButton> :
+        <IconButton type='button' to='/premium' imagetype='premium'>  Premium </IconButton> :
         <IconButton type='button' to='/' onClick={toggleModalAccount} imagetype='premium'> Premium </IconButton>
         }
-        
         </div>
     </div>
     )
