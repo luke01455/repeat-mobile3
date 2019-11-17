@@ -12,15 +12,10 @@ import { premiumUpgradeStart } from '../../redux/user/user.actions';
 
 import './menu.styles.scss';
 
-const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, premiumUpgradeStart }) => {
+const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden }) => {
 
   const startModalToggleMenu = () => {
     toggleModalAccount();
-    toggleSideMenuHidden();
-  }
-
-  const startPremiumAndToggleModal = () => {
-    premiumUpgradeStart(currentUser.displayName);
     toggleSideMenuHidden();
   }
 

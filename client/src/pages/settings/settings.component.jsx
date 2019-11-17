@@ -1,4 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+
+import { toggleModalAccount } from '../../redux/account-modal/account-modal.actions';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import SettingsOption from '../../components/settings-option/settings-option.component';
 import SettingsHeading from '../../components/settings-heading/settings-heading.component';
@@ -6,13 +11,20 @@ import SettingsHeading from '../../components/settings-heading/settings-heading.
 
 import './settings.styles.scss';
 
-const SettingsPage = () => (
+const SettingsPage = ({ toggleModalAccount, currentUser }) => (
     <div className="settings-container">
         <div className='settings-title'> Settings </div>
         <div className='list-container'>
 
             <SettingsHeading> User Options </SettingsHeading>
-            <SettingsOption type='button' linkLocation='account'> My Account </SettingsOption>
+            {
+              currentUser ? 
+              <SettingsOption type='button' linkLocation='account'> My Account </SettingsOption>  :
+              <div onClick={toggleModalAccount}>
+                   <SettingsOption type='button'  linkLocation='settings' > My Account </SettingsOption>
+              </div>
+              
+            }
             <SettingsOption type='button' linkLocation='settings/recordingsettings'> Recording Settings </SettingsOption>
             <SettingsOption type='button' linkLocation='settings'> App Notification Settings </SettingsOption>
             <SettingsOption type='button' linkLocation='settings'> Change Password </SettingsOption>
@@ -30,4 +42,12 @@ const SettingsPage = () => (
     </div>
 )
 
-export default SettingsPage;
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser
+  });
+
+  const mapDispatchToProps = dispatch => ({
+    toggleModalAccount: () => dispatch(toggleModalAccount()),
+  });
+
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsPage);
