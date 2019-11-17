@@ -5,9 +5,13 @@
   min-width: 335px;
   max-width: 450px;
 
+  @media (max-height: 725px) { 
+    height: 100px;
+  }
+
   .background-container {
     position: relative;
-    z-index: -2;
+    z-index: 1;
     max-width: 450px;
     min-width: 320px;
     top: 85px;
@@ -16,6 +20,11 @@
     background-image: url("../../images/appbground.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+    @media (max-height: 725px) { 
+      top: 41px;
+    }
+    
   }
   .logo-container {
     position: relative;
@@ -25,7 +34,7 @@
 
     .logo {
       position: relative;
-      z-index: -1;
+      z-index: 1;
       margin: auto;
       background: rgb(104,132,255);
       background: linear-gradient(90deg, rgba(104,132,255,1) 0%, rgba(80,153,219,1) 50%, rgba(45,198,225,1) 100%);
@@ -34,6 +43,11 @@
       height: 185px;
       box-shadow: 12px 22px 45px 7px #c0e6fa;
 
+      @media (max-height: 725px) { 
+        width: 125px;
+        height: 125px;
+      }
+
       .logo-img {
         position: relative;
         top: 12px;
@@ -41,7 +55,15 @@
         height: 120px;
         position: relative;
         z-index: 2;
+
+        @media (max-height: 725px) {
+          top: 9px;
+          left: 33px;
+          height: 72px;
+        }
       }
+
+
 
       .title {
         font-family: "Caveat", Times, serif;
@@ -53,6 +75,12 @@
         color: white;
         text-decoration: underline;
         text-decoration-color: white;
+
+        @media (max-height: 725px) {
+          font-size: 28px;
+          top: -10px;
+          left: 19px;
+        }
       }
     }
   }
