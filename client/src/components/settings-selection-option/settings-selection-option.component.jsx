@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import ToggleSwitch from '../toggle-switch/toggle-switch.component'
+
+import { selectHqLqState, selectOnOffState } from '../../redux/switches/switches.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import './settings-selection-option.styles.scss';
 
-const SettingsSelectionOption = ({ children, currentUser, userType, ...props }) => {
+const SettingsSelectionOption = ({ children, currentUser, userType, isHqLq, isRecordingOnOff, ...props }) => {
 
     let premiumStatus = 0;
     if(currentUser) {
@@ -23,9 +25,9 @@ return (
                 {children}
             </span>
             { switchType === 'free' ? 
-            <ToggleSwitch /> : 
+            <ToggleSwitch btnName = 'onOffBtn'  testingOnOff={isRecordingOnOff ? true : false}/> : 
             premiumStatus ?
-            <ToggleSwitch /> :
+            <ToggleSwitch btnName = 'premiumBtn' testingOnOff={isHqLq ? true : false}/> :
              <span></span>
              }
         </span>
@@ -34,8 +36,11 @@ return (
 }
 
 const mapStateToProps = createStructuredSelector({
-    currentUser: selectCurrentUser
+    currentUser: selectCurrentUser,
+    isRecordingOnOff: selectOnOffState,
+    isHqLq: selectHqLqState
 });
+
 
 
 export default connect(mapStateToProps)(SettingsSelectionOption);

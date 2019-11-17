@@ -2,37 +2,45 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { selectHqLqState } from '../../redux/switches/switches.selectors';
-import { selectOnOffState } from '../../redux/switches/switches.selectors';
+import { selectHqLqState, selectOnOffState } from '../../redux/switches/switches.selectors';
+import { toggleRecordingOnOff, toggleHqOnOff } from '../../redux/switches/switches.actions';
 
 import Toggle from 'react-toggle'
 
 import './toggle-switch.styles.css';
 
-const ToggleSwitch = ({ btnName }) => {
+const ToggleSwitch = ({isRecordingOnOff, isHqLq, toggleRecordingOnOff, toggleHqOnOff, ...props }) => {
+
 
   const toggleOnOff = () => {
-
+    if( props.btnName === 'onOffBtn') {
+      toggleRecordingOnOff();
+    }
+    if ( props.btnName === 'premiumBtn') {
+      toggleHqOnOff();
+    }
   }
 
   return (
     <div>
       <label>
         <Toggle
-          defaultChecked={true}
-          onChange={() => console.log('test')} />
+          defaultChecked={ props.testingOnOff }
+          onChange={toggleOnOff} />
       </label>
     </div>
   );
 }
 
 const mapStateToProps = createStructuredSelector({
-  toggleRecordingOnOff: selectOnOffState,
-  toggleBetweenHqLq: selectHqLqState
+  isRecordingOnOff: selectOnOffState,
+  isHqLq: selectHqLqState
 });
 
 const mapDispatchToProps = dispatch => ({
-  //signOutStart: () => dispatch(signOutStart())
+  toggleRecordingOnOff: () => dispatch(toggleRecordingOnOff()),
+  toggleHqOnOff: () => dispatch(toggleHqOnOff())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToggleSwitch);
+
