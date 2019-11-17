@@ -10,7 +10,7 @@ return (
 <div className='recording-settings-title'> RECORDING SETTINGS </div>
     <SettingsSelectionOption btnName='onOffBtn' userType="free"> On / Off </SettingsSelectionOption>
     <SettingsSelectionOption btnName='premiumBtn' userType="premium"> HQ / LQ </SettingsSelectionOption>
-    <SettingsSelectionOption userType="free"> Something Else </SettingsSelectionOption>
+    {/* <SettingsSelectionOption userType="free"> Something Else </SettingsSelectionOption> */}
 </div>
 )
 }

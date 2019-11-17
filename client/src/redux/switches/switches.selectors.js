@@ -1,8 +1,13 @@
-// import { createSelector } from 'reselect';
+import { createSelector } from 'reselect';
 
-// const selectSideMenu = state => state.sideMenu;
+const selectSwitches = state => state.switches;
 
-// export const selectSideMenuHidden = createSelector(
-//     [selectSideMenu],
-//     user => user.hidden
-// )
+ export const selectHqLqState = createSelector(
+     [selectSwitches],
+     switches => switches.hqLq
+ )
+
+ export const selectOnOffState = createSelector(
+    [selectSwitches],
+    switches => switches.onOff
+)
