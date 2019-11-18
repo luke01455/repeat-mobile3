@@ -10,6 +10,10 @@
     transition: transform 0.3s ease-in-out;
     border: 1px solid black;
     z-index: 8;
+
+    @media (max-height: 740px) { 
+      height: 99.6vh;
+  }
     &.closed {
         transform: translateX(-100%);
     }

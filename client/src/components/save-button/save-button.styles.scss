@@ -11,6 +11,11 @@
         border-radius: 15px;
         line-height: 42px;
         margin: auto;
+
+        @media (max-height: 530px) { 
+            width: 175px;
+            height: 39px;
+        }
     }
     
 }

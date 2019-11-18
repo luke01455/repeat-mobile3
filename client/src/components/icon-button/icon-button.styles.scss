@@ -7,6 +7,11 @@
     .text-container {
         margin-top: 10px;
         color: black;
+
+        @media (max-height: 545px) {
+            margin-top: 5px; 
+           font-size: 0.9em;
+        }
     }
 }
 
@@ -23,24 +28,39 @@
     border: 1px solid #aec4f9;
     box-shadow: -0px -2px 34px -5px #c0e6fa;
     
-    
+    @media (max-height: 545px) { 
+        height: 48px;
+        width: 48px;
+    }
 
     .premiumIcon {
         margin-top: 13px;
         width: 24px;
         height: 23px;
+
+        @media (max-height: 545px) { 
+            margin-top: 12px;
+        }
     }
 
     .settingsIcon {
         margin-top: 13px;
         width: 24px;
         height: 24px;
+
+        @media (max-height: 545px) { 
+            margin-top: 12px;
+        }
     }
 
     .recordingsIcon {
         margin-top: 13px;
         width: 20px;
         height: 24px;
+
+        @media (max-height: 545px) { 
+            margin-top: 12px;
+        }
     }
 
 

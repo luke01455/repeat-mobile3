@@ -9,6 +9,10 @@
     height: 100px;
   }
 
+  @media (max-height: 650px) { 
+    margin-top: -15px;
+  }
+
   .background-container {
     position: relative;
     z-index: 1;
