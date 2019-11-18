@@ -25,6 +25,7 @@ const IconButton = ({children, ...props}) => {
     }
 
     return(
+      
     <Link className='icon-button-container' {...props}>
         <div className='image-container'> 
         <img src={imageLocation} className={iconType} alt='icon'/>

@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import Timer from 'react-compound-timer'
+
 import RangeBar from '../../components/range-bar/range-bar.component';
 import Title from '../../components/title/title.component';
 import SaveButton from '../../components/save-button/save-button.component';
@@ -29,6 +31,11 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
+        <Timer initialTime={20000}>
+            <Timer.Hours /> hours
+            <Timer.Minutes /> minutes
+            <Timer.Seconds /> seconds
+        </Timer>
         </div>
         <SaveButton type='button' className="save-button" onClick={saveRecording} ></SaveButton>
         <div className="buttons-wrapper">
