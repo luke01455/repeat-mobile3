@@ -7,8 +7,7 @@ import Timer from 'react-compound-timer'
 import TopSection from '../../components/top-section/top-section.component';
 import TopSectionUsers from '../../components/top-section-users/top-section-users.component';
 import MidSection from '../../components/mid-section/mid-section.component';
-import RangeBar from '../../components/range-bar/range-bar.component';
-import SaveButton from '../../components/save-button/save-button.component';
+import BotSection from '../../components/bot-section/bot-section.component';
 import IconButton from '../../components/icon-button/icon-button.component';
 
 import { selectCurrentUser } from '../../redux/user/user.selectors';
@@ -38,7 +37,7 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
         }
 
         <MidSection />
-        
+        <BotSection />
         {/* <Title /> */}
         {/* <div className="center-container">
         <div className="save-past-text"> Save the past...</div>

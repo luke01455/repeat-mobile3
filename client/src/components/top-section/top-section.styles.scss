@@ -2,6 +2,10 @@
     background-image: url("../../images/background1.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     height: 35vh;
     //font-size: calc(10px + 2vmin);
     color: white;
