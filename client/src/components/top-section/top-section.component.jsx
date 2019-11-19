@@ -9,12 +9,16 @@ const TopSection = ({ }) => (
     <div className="Top-Section">
 <Header />
 <div className="Top-Section-Button">
-  <Link className="Signup-button" to='/signup' >Sign Up</Link>
+  <Link  className="Signup-button" to='/signup' >
+    <div className='Signup-button-text'>
+      Sign Up
+    </div>
+  </Link>
 
   <div className="Para-Holders">
 
           <p id="login-plain-text">
-           Have an account?<Link to='/'> Log In </Link>
+           Have an account?<Link to='/signin'> Log In </Link>
           </p>
         
 

@@ -17,6 +17,10 @@
   } 
 
     .Signup-button {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     z-index: 0;
     border:2.7px solid white;
     border-radius:7%;
@@ -29,6 +33,12 @@
     margin-top: 25px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    text-decoration: none;
+
+    .Signup-button-text {
+      
+      padding-right: 5px;
+    }
   } 
   
   .Para-Holders {
