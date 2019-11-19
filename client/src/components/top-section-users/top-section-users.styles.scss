@@ -1,0 +1,54 @@
+.Top-Section{
+    background-image: url("../../images/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+    //font-size: calc(10px + 2vmin);
+    color: white;
+    width: 100%;
+  }
+  
+   .Top-Section-Button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //height: 85%;
+  } 
+
+    .Signup-button {
+    z-index: 0;
+    border:2.7px solid white;
+    border-radius:7%;
+    width: 165px;
+    height: 60px; 
+    background-color: rgba(255,255,255, 0.4);
+    color: white;
+    font-size: 22px;
+    border-radius: 7px; 
+    margin-top: 25px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } 
+  
+  .Para-Holders {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .Para-Holders #login-plain-text {
+    font-size: 12px;
+  }
+  
+  .Para-Holders #login-plain-text a {
+    color: white;
+    text-decoration: none;
+    padding-left: 5%;
+    font-size: 14px;
+  } 
+
