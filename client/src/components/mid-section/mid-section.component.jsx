@@ -1,6 +1,8 @@
 import React from 'react';
 
-import cddvd from '../../images/cddvd.png';
+
+import Timer from 'react-compound-timer';
+import RangeBar from '../../components/range-bar/range-bar.component';
 
 import './mid-section.styles.scss';
 
@@ -8,19 +10,19 @@ import './mid-section.styles.scss';
 
 const MidSection = () => (
 <div className="App-header">
-<div className="SaveText-Container">
-<p id="MidText-1"> Save the past... </p>
-<p id="MidText-2"> 10 Minutes </p>
-</div>
-<div className="Rangebar-Container"> 
-  <input type="range" className="range" name="" defaultValue="10"
-  min="0" max="20"></input>
-</div>
-<div className="cd-container">
-<img src={cddvd} className="App-logo" alt="logo" />
-</div>
+
+<div className="center-container">
+        <div className="save-past-text"> Save the past...</div>
+        <div className="minutes-text"> 10 minutes </div>
+        <RangeBar />
+        <Timer initialTime={20000} id='timer-text'>
+            <Timer.Hours /> hours
+            <Timer.Minutes /> minutes
+            <Timer.Seconds /> seconds
+        </Timer>
+        </div>
 <div className= "Savebtn-Container">
-<button className="Signup-button" id="Savebtn">Save</button>
+<button  id="Savebtn">Save</button>
 </div>
 </div>
 

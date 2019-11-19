@@ -40,7 +40,7 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
         <MidSection />
         
         {/* <Title /> */}
-        <div className="center-container">
+        {/* <div className="center-container">
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
         <RangeBar />
@@ -50,7 +50,7 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
             <Timer.Seconds /> seconds
         </Timer>
         </div>
-        <SaveButton type='button' className="save-button" onClick={saveRecording} ></SaveButton>
+        <SaveButton type='button' className="save-button" onClick={saveRecording} ></SaveButton> */}
         <div className="buttons-wrapper">
         <IconButton type='button' to='/settings' imagetype='settings'>Settings</IconButton>
         <IconButton type='button' to='/' imagetype='recordings' onClick={openRecordings} >Recordings</IconButton>
