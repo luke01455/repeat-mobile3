@@ -29,7 +29,7 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
     
     <div className="homepage-container">
         <TopSection />
-        <Title />
+        {/* <Title /> */}
         <div className="center-container">
         <div className="save-past-text"> Save the past...</div>
         <div className="minutes-text"> 10 minutes </div>
