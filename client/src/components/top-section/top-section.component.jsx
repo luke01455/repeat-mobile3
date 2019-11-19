@@ -9,7 +9,7 @@ const TopSection = ({ }) => (
     <div className="Top-Section">
 <Header />
 <div className="Top-Section-Button">
-  <button className="Signup-button" >Sign Up</button>
+  <Link className="Signup-button" to='/signup' >Sign Up</Link>
 
   <div className="Para-Holders">
 
