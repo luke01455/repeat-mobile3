@@ -33,7 +33,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Menu />
       <AccountReqModal />
       <Switch>

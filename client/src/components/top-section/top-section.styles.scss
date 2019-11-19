@@ -1,0 +1,88 @@
+.Top-Section{
+    background-image: url("../../images/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24%;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    width: 100%;
+  }
+  
+   .Top-Section-Button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    transition: 0.1s;
+  } 
+  
+   .Menubtn-Container {
+    display: grid;
+    padding-top: 2%;
+    grid-template-columns: 45px 1fr;
+    align-items: center;
+  }
+  
+  .Menu-Button {
+    min-height: 20px;
+    height: 2.5vh;
+    transition: 0.1s;
+  }
+  
+  .Menu-Button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  
+  
+    .Signup-button {
+    z-index: 0;
+    border:2.7px solid white;
+    border-radius:7%;
+    width: 37%;
+    height: 6.5vh; 
+    background-color: rgba(255,255,255, 0.3);
+    color: white;
+    font-size: calc(21px + 0.5vw);
+    border-radius: 7px; 
+    max-width: 300px;
+    min-height: 60px;
+    transition: 0.1s;
+  } 
+  
+  .Signup-button:hover {
+    cursor: pointer;
+    width: 37%; 
+    background-color: rgba(255,255,255, 0.6);
+    transform: scale(1.03);
+  }
+
+  .Para-Holders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-bottom: 5%;
+  }
+  .Para-Holders #login-plain-text {
+    font-size: 0.5em;
+  }
+  
+  .Para-Holders #login-plain-text a {
+    color: white;
+    text-decoration: none;
+    padding-left: 5%;
+    font-size: 1.2em;
+    transition: 0.2s;
+  } 
+
+  .Para-Holders #login-plain-text a:hover {
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
