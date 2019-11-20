@@ -16,17 +16,19 @@ const MidSection = () => {
     
 
     return (
-        <div className="App-header">
+        <div className="Middle-Section">
 
             <div className="center-container">
                 <div className="save-past-text"> Save the past...</div>
                 <div className="minutes-text"> 10 minutes </div>
                 <RangeBar />
+                <div className='timer-organiser'>
                 <Timer initialTime={20000} id='timer-text'>
-                    <Timer.Hours /> hours
-            <Timer.Minutes /> minutes
-            <Timer.Seconds /> seconds
-        </Timer>
+                <Timer.Minutes /> minutes
+                <div className='spacer'></div>
+                <Timer.Seconds /> seconds
+                </Timer>
+                </div>
             </div>
             <div className="Savebtn-Container">
                 <button onClick={saveRecording} id="Savebtn">Save</button>

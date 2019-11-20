@@ -1,4 +1,4 @@
-.App-header {
+.Middle-Section {
     background-image: url("../../images/background2.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -28,10 +28,17 @@
         font-size: 1.1em;
       }
 
+      .timer-organiser {
+        margin-left: 89px;
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
 
     }
   }
-
 
 
 
