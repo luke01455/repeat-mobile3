@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 import './top-section-users.styles.scss';
 
-const TopSectionUsers = ({ }) => (
-    <div className="Top-Section">
+const TopSectionUsers = ({ isSmall }) => (
+    <div className={`Top-Section ${isSmall ? `small` : ``}`}>
 <Header />
-<div className="Top-Section-Container">
+<div className={`Top-Section-Container ${isSmall ? `small` : ``}`}>
   <div className="Title-Image-Container">
 
   </div>

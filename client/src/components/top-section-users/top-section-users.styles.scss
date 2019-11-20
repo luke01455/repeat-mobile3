@@ -6,6 +6,10 @@
     //font-size: calc(10px + 2vmin);
     color: white;
     width: 100%;
+
+    &.small {
+      height: 30vh;
+    }
   }
   
    .Top-Section-Container {
@@ -24,6 +28,24 @@
     }
     @media (max-height: 500px) { 
       margin-top: -50px;
+    }
+
+    &.small {
+      margin-top: -20px;
+
+      @media (max-height: 700px) { 
+        margin-top: -25px;
+      }
+  
+      @media (max-height: 620px) { 
+        margin-top: -30px;
+      }
+      @media (max-height: 575px) { 
+        margin-top: -45px;
+      }
+      @media (max-height: 500px) { 
+        margin-top: -50px;
+      }
     }
     .Title-Image-Container{
       margin-top: -5px;

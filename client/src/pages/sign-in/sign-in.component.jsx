@@ -29,7 +29,7 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
     };
         return (
             <div>
-            <TopSectionUsers />
+            <TopSectionUsers isSmall='isSmall'/>
             <div className='SignInContainer'>
                 
                 <div className='SignInTitle'>SIGN IN</div>
