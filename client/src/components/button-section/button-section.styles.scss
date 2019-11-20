@@ -1,0 +1,19 @@
+.buttons-wrapper {
+    min-width: 320px;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+    @media (max-height: 675px) { 
+      margin-top: 35px;
+    }
+  
+    @media (max-height: 580px) { 
+      margin-top: 20px;
+    }
+  
+    div {
+    }
+  }

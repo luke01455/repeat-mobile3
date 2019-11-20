@@ -10,7 +10,7 @@ import { toggleModalAccount } from '../../redux/account-modal/account-modal.acti
 
 import './button-section.styles.scss';
 
-const HomePage = ({ currentUser, toggleModalAccount }) => {
+const ButtonSection = ({ currentUser, toggleModalAccount }) => {
 
     const openRecordings = () => {
         window.MobileActions.OpenRecordings();
@@ -38,4 +38,4 @@ const mapDispatchToProps = dispatch => ({
     toggleModalAccount: () => dispatch(toggleModalAccount())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonSection);

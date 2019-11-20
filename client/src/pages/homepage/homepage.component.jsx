@@ -47,14 +47,14 @@ const HomePage = ({ currentUser, toggleModalAccount }) => {
         </Timer>
         </div>
         <SaveButton type='button' className="save-button" onClick={saveRecording} ></SaveButton> */}
-        <div className="buttons-wrapper">
+        {/* <div className="buttons-wrapper">
         <IconButton type='button' to='/settings' imagetype='settings'>Settings</IconButton>
         <IconButton type='button' to='/' imagetype='recordings' onClick={openRecordings} >Recordings</IconButton>
         { currentUser ?
         <IconButton type='button' to='/premium' imagetype='premium'>  Premium </IconButton> :
         <IconButton type='button' to='/' onClick={toggleModalAccount} imagetype='premium'> Premium </IconButton>
         }
-        </div>
+        </div> */}
     </div>
     )
     }
