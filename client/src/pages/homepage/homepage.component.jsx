@@ -17,10 +17,7 @@ import './homepage.styles.scss';
 
 const HomePage = ({ currentUser, toggleModalAccount }) => {
     
-    const saveRecording = () => {
-        window.MobileActions.Save();
-      }
-    
+
     const openRecordings = () => {
         window.MobileActions.OpenRecordings();
     }

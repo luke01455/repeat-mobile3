@@ -8,24 +8,33 @@ import './mid-section.styles.scss';
 
 
 
-const MidSection = () => (
-<div className="App-header">
+const MidSection = () => {
 
-<div className="center-container">
-        <div className="save-past-text"> Save the past...</div>
-        <div className="minutes-text"> 10 minutes </div>
-        <RangeBar />
-        <Timer initialTime={20000} id='timer-text'>
-            <Timer.Hours /> hours
+    const saveRecording = () => {
+        window.MobileActions.Save();
+      }
+    
+
+    return (
+        <div className="App-header">
+
+            <div className="center-container">
+                <div className="save-past-text"> Save the past...</div>
+                <div className="minutes-text"> 10 minutes </div>
+                <RangeBar />
+                <Timer initialTime={20000} id='timer-text'>
+                    <Timer.Hours /> hours
             <Timer.Minutes /> minutes
             <Timer.Seconds /> seconds
         </Timer>
+            </div>
+            <div className="Savebtn-Container">
+                <button onClick={saveRecording} id="Savebtn">Save</button>
+            </div>
         </div>
-<div className= "Savebtn-Container">
-<button  id="Savebtn">Save</button>
-</div>
-</div>
+    )
 
-)
+
+}
 
 export default MidSection;
