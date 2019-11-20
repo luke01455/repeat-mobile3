@@ -25,8 +25,8 @@
     width: 50px;
     border-radius: 25px;
     background-color: transparent;
-    border: 1px solid #aec4f9;
-    box-shadow: -0px -2px 34px -5px #c0e6fa;
+    border: 1px solid #bb99ff;
+    box-shadow: -0px -2px 34px -5px #ccb3ff;
     
     @media (max-height: 545px) { 
         height: 48px;
@@ -37,6 +37,8 @@
         margin-top: 13px;
         width: 24px;
         height: 23px;
+        -webkit-filter : hue-rotate(55deg);
+        filter : hue-rotate(55deg);
 
         @media (max-height: 545px) { 
             margin-top: 12px;
@@ -47,6 +49,8 @@
         margin-top: 13px;
         width: 24px;
         height: 24px;
+        -webkit-filter : hue-rotate(55deg);
+        filter : hue-rotate(55deg);
 
         @media (max-height: 545px) { 
             margin-top: 12px;
@@ -57,6 +61,8 @@
         margin-top: 13px;
         width: 20px;
         height: 24px;
+        -webkit-filter : hue-rotate(55deg);
+        filter : hue-rotate(55deg);
 
         @media (max-height: 545px) { 
             margin-top: 12px;
