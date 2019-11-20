@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import FormInput from '../../components/form-input/form-input.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import TopSectionUsers from '../../components/top-section-users/top-section-users.component';
 
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
 
@@ -27,8 +28,10 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
         setCredentials({...userCredentials, [name]: value})
     };
         return (
-            
+            <div>
+            <TopSectionUsers />
             <div className='SignInContainer'>
+                
                 <div className='SignInTitle'>SIGN IN</div>
                 <form onSubmit={handleSubmit}>
                     <FormInput
@@ -57,6 +60,7 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
                 </form>
               <div className="sign-up-text"> Sign up </div>
               <div className="forgot-password-text"> Forgot your password? </div>
+            </div>
             </div>
         )
     }
