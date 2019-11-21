@@ -3,6 +3,7 @@ import { connect }from 'react-redux';
 
 import FormInput from '../../components/form-input/form-input.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import TopSectionUsers from '../../components/top-section-users/top-section-users.component';
 
 import { signUpStart } from '../../redux/user/user.actions';
 
@@ -37,6 +38,8 @@ const  SignUp = ({ signUpStart }) => {
 
 
         return (
+            <div>
+            <TopSectionUsers />
             <div className='SignUpContainer'>
                 <div className='SignUpTitle'>SIGN UP</div>
             <form className='sign-up-form' onSubmit={handleSubmit}>
@@ -78,6 +81,7 @@ const  SignUp = ({ signUpStart }) => {
                 <div className="sign-up-text"> Already got an account? </div>
                 <div className="sign-up-text2"> Sign In </div>
             </form>
+            </div>
             </div>
         )
     }

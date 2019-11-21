@@ -5,8 +5,8 @@ background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-2
 background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-    height: 99.8vh;
-   //height: 90vh;
+    //height: 99.8vh;
+   height: 99.8%;
     text-align: left;
     position: absolute;
     padding: 0px 6em 0px 6em;
@@ -17,8 +17,8 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
     z-index: 8;
 
     @media (max-height: 740px) { 
-    height: 99.6vh;
-    //height: 90vh;
+    //height: 99.6vh;
+    height: 99.6%;
   }
     &.closed {
         transform: translateX(-100%);
