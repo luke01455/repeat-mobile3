@@ -7,13 +7,14 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import SettingsOption from '../../components/settings-option/settings-option.component';
 import SettingsHeading from '../../components/settings-heading/settings-heading.component';
+import SettingsBar from '../../components/settings-bar/settings-bar.component';
 
 
 import './settings.styles.scss';
 
 const SettingsPage = ({ toggleModalAccount, currentUser }) => (
     <div className="settings-container">
-        <div className='settings-title'> Settings </div>
+        <SettingsBar> Settings </SettingsBar>
         <div className='list-container'>
 
             <SettingsHeading> User Options </SettingsHeading>
