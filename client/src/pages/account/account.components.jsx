@@ -7,11 +7,14 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import SettingsHeading from '../../components/settings-heading/settings-heading.component';
 import SettingsOption from '../../components/settings-option/settings-option.component';
+import TopSectionUsers from '../../components/top-section-users/top-section-users.component';
 
 
 import './account.styles.scss';
 
 const AccountPage = ({ currentUser }) => (
+    <div>
+        <TopSectionUsers isSmall='isSmall' />
     <div className="account-container">
         <div className='header-section-container'>
             <div className='account-title'> Account </div>
@@ -36,6 +39,7 @@ const AccountPage = ({ currentUser }) => (
         <SettingsOption linkLocation='account'> Premium </SettingsOption>
 
 
+    </div>
     </div>
 )
 

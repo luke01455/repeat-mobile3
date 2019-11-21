@@ -2,6 +2,7 @@ import React from 'react';
 
 import FormInput from '../../components/form-input/form-input.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
+import TopSectionUsers from '../../components/top-section-users/top-section-users.component';
 
 import './contact.styles.scss';
 
@@ -29,6 +30,8 @@ class ContactPage extends React.Component {
 
     render() {
         return (
+           <div>
+               <TopSectionUsers isSmall='isSmall'/>
             <div className='contact-container'>
                 <div className='contact-title'> CONTACT </div>
                 <div> <p>Send us a message, we'll get back to you.</p></div>
@@ -53,6 +56,7 @@ class ContactPage extends React.Component {
 
                 </form>
 
+            </div>
             </div>
         )
     }
