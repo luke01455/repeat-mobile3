@@ -1,8 +1,11 @@
 import React from 'react';
 
+import TopSectionUsers from '../../components/top-section-users/top-section-users.component';
 import './premium-section.styles.scss';
 
 const PremiumSection = () => (
+    <div>
+<TopSectionUsers isSmall='isSmall' />
 <div className='centraliser'>
 <div className="premium-section-container"> 
     <div className='PremiumTitle'> Premium </div>
@@ -13,6 +16,7 @@ const PremiumSection = () => (
         <p> Location based recording option</p>
         <p> Help support the team! </p>
     </div>
+</div>
 </div>
 </div>
 )

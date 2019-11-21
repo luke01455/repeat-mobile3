@@ -1,4 +1,5 @@
 .centraliser {
+    margin-top: 20px;
     width: 100vw;
     display: flex;
     align-content: space-around;
@@ -10,7 +11,7 @@ background: linear-gradient(0deg, rgba(230,247,247,1) 0%, rgba(221,246,246,1) 45
     align-content: center;
     flex-direction: column;
     width: 80vw;
-    height: 70vh;
+    height: 60vh;
     border: 1px solid black;
     border-radius: 4px;
     .PremiumTitle {
