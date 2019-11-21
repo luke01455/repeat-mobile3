@@ -1,3 +1,11 @@
+.overall-container{
+    background-image: url("../../images/background3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
 .SignUpContainer {
     width: 80vw;
     display: flex;
@@ -44,6 +52,7 @@ cursor: pointer;
     text-align: left;
     color: #707070;
     cursor: pointer;
+    margin-bottom: 50px;
     
     &:hover {
         color: black;

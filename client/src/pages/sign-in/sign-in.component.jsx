@@ -28,7 +28,7 @@ const  SignIn = ({ emailSignInStart, googleSignInStart }) => {
         setCredentials({...userCredentials, [name]: value})
     };
         return (
-            <div>
+            <div className='overall-container'>
             <TopSectionUsers isSmall='isSmall'/>
             <div className='SignInContainer'>
                 

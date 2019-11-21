@@ -38,7 +38,7 @@ const  SignUp = ({ signUpStart }) => {
 
 
         return (
-            <div>
+            <div className='overall-container'>
             <TopSectionUsers />
             <div className='SignUpContainer'>
                 <div className='SignUpTitle'>SIGN UP</div>
