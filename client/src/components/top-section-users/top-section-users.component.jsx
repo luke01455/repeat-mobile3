@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../header/header.component';
-import { Link } from 'react-router-dom';
 
 
 import './top-section-users.styles.scss';

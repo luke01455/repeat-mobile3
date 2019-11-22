@@ -12,7 +12,6 @@ import AccountPage from './pages/account/account.components';
 import ContactPage from './pages/contact/contact.component';
 import RecordingSettings from './pages/recording-settings/recording-settings.component';
 
-import Header from './components/header/header.component';
 import Menu from './components/menu/menu.component';
 import AccountReqModal from './components/account-required-modal/account-required-modal.component';
 

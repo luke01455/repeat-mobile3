@@ -10,9 +10,10 @@ import './mid-section.styles.scss';
 
 const MidSection = () => {
 
-    const [minsTxt, setMinsTxt] = useState(10)
+    const [minsTxt, setMinsTxt] = useState(10);
+    
     const saveRecording = () => {
-        window.MobileActions.Save();
+        window.MobileActions.Save(parseInt(minsTxt));
       }
 
     const retrieveSliderNum = (rangeNum) => {
