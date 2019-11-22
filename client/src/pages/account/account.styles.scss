@@ -5,8 +5,9 @@
     margin: 0px 15px 0px 15px;
     padding: 10px 0px 10px 0px;
     border: 1px solid black;
-    background: rgb(230,247,247);
-    background: linear-gradient(0deg, rgba(230,247,247,1) 0%, rgba(221,246,246,1) 45%, rgba(204,246,243,1) 100%);
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 6px;
     .account-title {
         margin: 10px 51px;
