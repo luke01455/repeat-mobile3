@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 import Timer from 'react-compound-timer';
@@ -10,9 +10,14 @@ import './mid-section.styles.scss';
 
 const MidSection = () => {
 
+    const [minsTxt, setMinsTxt] = useState(0)
     const saveRecording = () => {
         window.MobileActions.Save();
       }
+
+    const retrieveSliderNum = (rangeNum) => {
+        setMinsTxt(rangeNum);
+    } 
     
 
     return (
@@ -20,8 +25,8 @@ const MidSection = () => {
 
             <div className="center-container">
                 <div className="save-past-text"> Save the past...</div>
-                <div className="minutes-text"> 10 minutes </div>
-                <RangeBar />
+                <div className="minutes-text"> {minsTxt} minutes </div>
+                <RangeBar callBackFromParent={retrieveSliderNum}/>
                 <div className='timer-organiser'>
                 <Timer initialTime={20000} id='timer-text'>
                 <Timer.Minutes /> minutes
@@ -36,7 +41,7 @@ const MidSection = () => {
         </div>
     )
 
-
+    
 }
 
 export default MidSection;
