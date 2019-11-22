@@ -10,7 +10,7 @@ import './mid-section.styles.scss';
 
 const MidSection = () => {
 
-    const [minsTxt, setMinsTxt] = useState(0)
+    const [minsTxt, setMinsTxt] = useState(10)
     const saveRecording = () => {
         window.MobileActions.Save();
       }

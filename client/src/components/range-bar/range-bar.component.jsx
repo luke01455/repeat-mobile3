@@ -4,16 +4,15 @@ import './range-bar.styles.scss';
 
 const RangeBar = ({callBackFromParent}) => {
 
-  const testFn = () => {
-    let testNum = 15;
-    callBackFromParent(testNum);
-    //console.log(testNum);
+  const onFormChange = (value) => {
+
+    callBackFromParent(value);
   }
 
   return (
     <div className="Rangebar-Container">
       <input type="range" className="range" name="" defaultValue="10"
-        min="0" max="20" onChange={testFn}></input>
+        min="0" max="20" onChange={e => onFormChange(e.target.value)}></input>
     </div>
   )
 }
