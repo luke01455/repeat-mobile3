@@ -15,12 +15,29 @@
     height: 60vh;
     border: 1px solid black;
     border-radius: 4px;
+
     .PremiumTitle {
         margin-top: 20px;
         text-align: center;
         font-size: 1.7em;
         margin-bottom: 40px;
         font-weight: bold;
+
+        @media (max-height: 725px) { 
+            margin-top: 10px;
+            margin-bottom: 20px;
+          }
+
+          @media (max-height: 650px) { 
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+
+          @media (max-height: 610px) { 
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+
     }
 
     .PremiumDescription {
@@ -30,8 +47,17 @@
         text-align: center;
         margin-bottom: 40px;
         font-weight: bold;
-    }
 
+        @media (max-height: 700px) { 
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+
+          @media (max-height: 575px) { 
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+    }
     .ListContainer {
         //position: relative;
         display: flex;

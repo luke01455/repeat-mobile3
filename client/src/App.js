@@ -7,10 +7,10 @@ import HomePage from './pages/homepage/homepage.component';
 import SignIn from './pages/sign-in/sign-in.component';
 import SignUp from './pages/sign-up/sign-up.component';
 import PremiumPage from './pages/premium/premium-component';
+import RecordingSettings from './pages/recording-settings/recording-settings.component';
 import SettingsPage from './pages/settings/settings.component';
 import AccountPage from './pages/account/account.components';
 import ContactPage from './pages/contact/contact.component';
-import RecordingSettings from './pages/recording-settings/recording-settings.component';
 
 import Menu from './components/menu/menu.component';
 import AccountReqModal from './components/account-required-modal/account-required-modal.component';
