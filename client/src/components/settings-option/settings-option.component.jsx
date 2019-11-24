@@ -10,8 +10,8 @@ import './settings-option.styles.scss';
 const SettingsOption = ({ children, ...props }) => {
 
 return (
-    <Link className="settings-option-container" to={`/${props.linkLocation}`}>
-        <span className="settings-option">
+    <Link className={`settings-option-container`} to={`/${props.linkLocation}`}>
+        <span className={`settings-option ${props.isDead ? 'dead-link' : ''}`}>
             <span>
                 {children}
             </span>

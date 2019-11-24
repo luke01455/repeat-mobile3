@@ -52,7 +52,7 @@ class ContactPage extends React.Component {
                         label="message"
                         handleChange={this.handleChange}
                     />
-                    <CustomButton className='submit-button' type='submit'> SIGN UP </CustomButton>
+                    <CustomButton className='submit-button' type='submit'> SEND </CustomButton>
 
                 </form>
 

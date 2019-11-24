@@ -3,15 +3,23 @@
     color: black;
     text-decoration: none;
 
-    .settings-option {
-        color: #2fb6b6;
-        width: 90vw;
-        display: flex;
-        justify-content: space-between;
-        margin: 5px 10px;
-        padding: 10px 5px 10px 5px;
-        border-bottom: 1px solid rgba(19, 16, 16, 0.2);
 
 
-    }
+
+
+
 }
+
+.settings-option {
+    color: #2fb6b6;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+    padding: 10px 5px 10px 5px;
+    border-bottom: 1px solid rgba(19, 16, 16, 0.2);
+
+    &.dead-link {
+        color: grey;
+    }
+}    

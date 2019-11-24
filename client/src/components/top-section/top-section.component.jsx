@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './top-section.styles.scss';
 
-const TopSection = ({ }) => (
+const TopSection = () => (
     <div className="Top-Section">
 <Header />
 <div className="Top-Section-Button">

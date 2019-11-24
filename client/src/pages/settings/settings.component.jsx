@@ -27,16 +27,16 @@ const SettingsPage = ({ toggleModalAccount, currentUser }) => (
               
             }
             <SettingsOption type='button' linkLocation='settings/recordingsettings'> Recording Settings </SettingsOption>
-            <SettingsOption type='button' linkLocation='settings'> App Notification Settings </SettingsOption>
-            <SettingsOption type='button' linkLocation='settings'> Change Password </SettingsOption>
+            <SettingsOption type='button' isDead={true} linkLocation='settings'> App Notification Settings </SettingsOption>
+            <SettingsOption type='button' isDead={true} linkLocation='settings'> Change Password </SettingsOption>
 
             <SettingsHeading> Feedback </SettingsHeading>
-            <SettingsOption type='button' linkLocation='settings'> Send us your feedback</SettingsOption>
-            <SettingsOption type='button' linkLocation='settings'> Rate the app </SettingsOption>
-            <SettingsOption type='button' linkLocation='settings'> Share the app </SettingsOption>
+            <SettingsOption type='button' linkLocation='contact'> Send us your feedback</SettingsOption>
+            <SettingsOption type='button' isDead={true} linkLocation='settings'> Rate the app </SettingsOption>
+            <SettingsOption type='button' isDead={true} linkLocation='settings'> Share the app </SettingsOption>
 
             <SettingsHeading> Terms & conditions </SettingsHeading>
-            <SettingsOption type='button' linkLocation='settings'> Privacy Policy </SettingsOption>
+            <SettingsOption type='button' isDead={true} linkLocation='settings'> Privacy Policy </SettingsOption>
             <SettingsOption noArrow='true'> Sign Out </SettingsOption>
             <SettingsOption noArrow='true'> Version: 1.0.0.2 </SettingsOption>
         </div>
