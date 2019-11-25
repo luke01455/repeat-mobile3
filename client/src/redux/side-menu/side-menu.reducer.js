@@ -11,6 +11,11 @@ const sideMenuReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 hidden: !state.hidden
             }
+        case SideMenuActionTypes.TURN_SIDE_MENU_OFF:
+            return {
+                ...state,
+                hidden: true
+            }
         default:
             return state;
     }

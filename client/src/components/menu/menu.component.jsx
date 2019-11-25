@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { useOnClickOutside } from '../../hooks/hooks'
 
-import { toggleSideMenuHidden } from '../../redux/side-menu/side-menu.actions';
+import { toggleSideMenuHidden, turnSideMenuOff } from '../../redux/side-menu/side-menu.actions';
 import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
 import { toggleModalAccount } from '../../redux/account-modal/account-modal.actions';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
@@ -13,10 +13,10 @@ import { premiumUpgradeStart } from '../../redux/user/user.actions';
 
 import './menu.styles.scss';
 
-const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden }) => {
+const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden, turnSideMenuOff }) => {
 
   const node = useRef();
-  useOnClickOutside(node, () => toggleSideMenuHidden());
+  useOnClickOutside(node, () => turnSideMenuOff());
 
   const startModalToggleMenu = () => {
     toggleModalAccount();
@@ -24,7 +24,7 @@ const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden })
   }
 
   return (
-    <div className={`styled-menu ${hidden ? 'closed' : ''}`}>
+    <div ref={node} className={`styled-menu ${hidden ? 'closed' : ''}`}>
       <div className='a-container'>
         <Link className="menu-link" onClick={toggleSideMenuHidden} to="/">
           HOME
@@ -55,7 +55,8 @@ const mapStateToProps = createStructuredSelector({
 const mapDispatchToProps = dispatch => ({
   toggleModalAccount: () => dispatch(toggleModalAccount()),
   toggleSideMenuHidden: () => dispatch(toggleSideMenuHidden()),
-  premiumUpgradeStart: userName => dispatch(premiumUpgradeStart(userName))
+  premiumUpgradeStart: userName => dispatch(premiumUpgradeStart(userName)),
+  turnSideMenuOff: () => dispatch(turnSideMenuOff())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);
