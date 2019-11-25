@@ -19,6 +19,8 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
     @media (max-height: 740px) { 
     //height: 99.6vh;
     height: 99.6%;
+    
+   
   }
     &.closed {
         transform: translateX(-100%);
@@ -44,4 +46,8 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
             }
           }
         }
+        .modal-menu-button {
+          margin-left: -85px;
+          margin-top: 10px;
+         }
 }
