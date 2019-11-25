@@ -14,14 +14,14 @@ const ToggleSwitch = ({isRecordingOnOff, isHqLq, toggleRecordingOnOff, toggleHqO
 
   const toggleOnOff = () => {
     if( props.btnName === 'onOffBtn') {
-      toggleRecordingOnOff();
+      // toggleRecordingOnOff();
       if(window.MobileActions) {
         window.MobileActions.ToggleRecording();
       }
       
     }
     if ( props.btnName === 'premiumBtn') {
-      toggleHqOnOff();
+     // toggleHqOnOff();
       if(window.MobileActions) {
         window.MobileActions.ToggleHqRecording();
       }

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
+import { useOnClickOutside } from '../../hooks/hooks'
 
 import { toggleSideMenuHidden } from '../../redux/side-menu/side-menu.actions';
 import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
@@ -13,6 +14,9 @@ import { premiumUpgradeStart } from '../../redux/user/user.actions';
 import './menu.styles.scss';
 
 const Menu = ({ hidden, toggleModalAccount, currentUser, toggleSideMenuHidden }) => {
+
+  const node = useRef();
+  useOnClickOutside(node, () => toggleSideMenuHidden());
 
   const startModalToggleMenu = () => {
     toggleModalAccount();
