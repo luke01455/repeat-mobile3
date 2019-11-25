@@ -7,3 +7,7 @@ export const toggleSideMenuHidden = () => ({
 export const turnSideMenuOff = () => ({
     type: SideMenuActionTypes.TURN_SIDE_MENU_OFF
 });
+
+export const turnSideMenuOn = () => ({
+    type: SideMenuActionTypes.TURN_SIDE_MENU_ON
+});

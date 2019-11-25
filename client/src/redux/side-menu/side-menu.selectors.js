@@ -7,7 +7,3 @@ export const selectSideMenuHidden = createSelector(
     user => user.hidden
 )
 
-export const selectSideMenuOff = createSelector(
-    [selectSideMenu],
-    user => user.hidden
-)

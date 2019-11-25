@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
-import { useOnClickOutside } from '../../hooks/hooks'
+import { useOnClickOutside } from '../../hooks/hooks';
 
 import { toggleSideMenuHidden, turnSideMenuOff } from '../../redux/side-menu/side-menu.actions';
 import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors';
