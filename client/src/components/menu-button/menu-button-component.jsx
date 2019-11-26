@@ -7,22 +7,15 @@ import { selectSideMenuHidden } from '../../redux/side-menu/side-menu.selectors'
 
 import './menu-button.styles.css';
 
-const MenuButton = ({ toggleSideMenuHidden, hidden, turnSideMenuOff, turnSideMenuOn, modalMenu }) => {
-  const egg = () => {
-    // toggleSideMenuHidden();
-    // toggleSideMenuHidden();
-  }
-
-  return (
-<div onClick={modalMenu ? turnSideMenuOff : turnSideMenuOn} className={`MenuButtonContainer ${!hidden ? 'is-active' : ''}`}>
-  <button className={`hamburger hamburger--3dy ${!hidden ? 'is-active' : ''}`} type="button">
-    <span className="hamburger-box">
-      <span className="hamburger-inner"></span>
-    </span>
-  </button>
-</div>
+const MenuButton = ({ toggleSideMenuHidden, hidden, turnSideMenuOff, turnSideMenuOn, modalMenu }) => (
+  <div onClick={modalMenu ? turnSideMenuOff : turnSideMenuOn} className={`MenuButtonContainer ${!hidden ? 'is-active' : ''}`}>
+    <button className={`hamburger hamburger--3dy ${!hidden ? 'is-active' : ''}`} type="button">
+      <span className="hamburger-box">
+        <span className="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
 )
-  }
 
 
 const mapStateToProps = createStructuredSelector({
