@@ -28,7 +28,7 @@ const Header = ({ currentUser, signOutStart }) => {
             {
                 currentUser ? (
                 <Link className='OptionLink'  to='/account' >
-                    {firstName[0].toUpperCase()}
+                    {firstName ? firstName[0].toUpperCase() : 'User'}
                 </Link>
                 ) : (
                     <Link className='OptionLink' to='/signup'>
