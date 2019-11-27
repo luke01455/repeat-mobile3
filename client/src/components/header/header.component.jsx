@@ -14,10 +14,12 @@ import './header.styles.scss';
 
 
 const Header = ({ currentUser, signOutStart }) => {
-    let firstName = ''
+    let firstName = '';
+    if(currentUser) {
     if(currentUser.displayName) {
        firstName = currentUser.displayName.split(' ');
     }
+}
     
     return (
     <div className='HeaderContainer'>
